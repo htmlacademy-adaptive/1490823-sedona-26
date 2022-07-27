@@ -1,7 +1,7 @@
 # Личный проект «Седона» 
 
 * Студент: [Алексей Филипчик](https://up.htmlacademy.ru/adaptive/26/user/1490823).
-* Наставник: `Неизвестно`.
+* Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena).
 
 ---
 
