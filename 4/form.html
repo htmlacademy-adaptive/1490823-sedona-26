@@ -2,21 +2,83 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Седона</title>
+    <title>Седона, напишите отзыв</title>
     <base href="https://htmlacademy-adaptive.github.io/1490823-sedona-26/4/">
 </head>
   <body>
     <header class="main-header">
-      <a href="#" class="logo">
+      <a href="index.html" class="logo">
         <img src="img/sedona-logo.svg" width="185" height="96" alt="Логотип Седана" class="logo-img">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__btn">
+        <a href="index.html#popup-menu" class="main-nav__btn">
           <span class="visually-hidden">Открыть меню.</span>
-        </button>
+        </a>
       </nav>
     </header>
     <section class="main-section">
+      <img src="img/sedona.svg" width="229" height="39" alt="Седона" class="main-section__img">
+      <h1 class="visually-hidden">Страница отзыва о путешествии в Седону.</h1>
+    </section>
+    <section class="section-form">
+      <h2 class="section-form__header">Оставьте свой отзыв</h2>
+      <p class="section-form__text">
+        Помогите нашим отелям стать лучше!<br>
+        оставьте отзыв о них, а также о<br>
+        посещенных вами<br>
+        достопримечательностях
+      </p>
+      <form class="form" name="form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="performance">
+          <legend class="legend">Представьтесь:</legend>
+          <label for="client-firstname">Имя*:
+            <input type="text" placeholder="Пётр" required name="client-firstname" class="client-firstname" id="client-firstname">
+          </label>
+          <label for="client-lastname">Фамилия*:
+            <input type="text" placeholder="Пустота" required name="client-lastname" class="client-lastname" id="client-lastname">
+          </label>
+          <label for="client-middle-name">Отчество:
+            <input type="text" placeholder="Викторович" name="client-middle-name" class="client-middle-name" id="client-middle-name">
+          </label>
+        </fieldset>
+        <fieldset class="contacts">
+          <legend class="legend">Контактная информация:</legend>
+          <label for="client-phone">Контактный телефон*:
+            <input type="tel" placeholder="Введите телефон" required name="client-phone" class="client-phone" id="client-phone">
+          </label>
+          <label for="client-email">Электронная почта*:
+            <input type="email" placeholder="Введите email" required name="client-email" class="client-email" id="client-email">
+          </label>
+        </fieldset>
+        <fieldset class="impression">
+          <legend class="legend">Ваше общее впечатление:</legend>
+          <input type="radio" checked name="impression" class="impression-good" id="impression-good">
+          <label for="impression-good">Скорее положительное</label>
+          <input type="radio" name="impression" class="impression-bad" id="impression-bad">
+          <label for="impression-bad">Скорее отрицательное</label>
+          <input type="radio" name="impression" class="unknown" id="impression-unknown">
+          <label for="impression-unknown">Затрудняюсь ответить</label>
+        </fieldset>
+        <fieldset class="places">
+          <legend class="legend">Посещенные достопримечательности:</legend>
+          <input type="checkbox" checked name="devil-bridge" class="devil-bridge" id="devil-bridge">
+          <label for="devil-bridge">Мост Дъявола</label>
+          <input type="checkbox" checked name="bell-rock" class="bell-rock" id="bell-rock">
+          <label for="bell-rock">Гора-Колокол</label>
+          <input type="checkbox" checked name="slide-park" class="slide-park" id="slide-park">
+          <label for="slide-park">Слайд-парк</label>
+          <input type="checkbox" name="red-rocks" class="red-rocks" id="red-rocks">
+          <label for="red-rocks">Красные скалы</label>
+        </fieldset>
+        <fieldset class="emotion">
+          <label for="emotion">Опишите свои эмоции:</label>
+          <textarea rows="5" cols="20" name="emotion" class="emotion" id="emotion">
+            Опишите подробно все свои восторги
+          </textarea>
+        </fieldset>
+        <button class="form-btn" type="submit">Отправить отзыв</button>
+        <p class="form-info">* --обязательные поля</p>
+      </form>
     </section>
     <footer class="main-footer">
       <p class="main-footer__tag">#Visit Sedona</p>
@@ -46,5 +108,26 @@
         <img src="img/htmlacademy.svg" width="16" height="16" alt="Логотип HTMLAcademy" class="main-footer__logo">
       </a>
     </footer>
+    <div class="modal-error modal-error--hidden">
+      <h2 class="modal-error-title">Что-то пошло не так!</h2>
+      <p class="modal-error__info">
+        Проверьте поля, выделенные<br>
+        красным, скорее всего вы<br>
+        забыли их заполнить
+      </p>
+      <button class="modal-error__btn">Ок</button>
+    </div>
+    <div class="modal-good modal-good--hidden">
+      <h2 class="modal-good-title">Ваш отзыв отправлен!</h2>
+    <p class="modal-good__info">
+      Спасибо за ваше участие, ваш<br>
+      отзыв уже поступил к нам.<br>
+      В ближайшее время мы<br>
+      опубликуем его на сайте.
+    </p>
+    <button class="modal-good__btn">
+      Закрыть окно
+    </button>
+    </div>
   </body>
 </html>
