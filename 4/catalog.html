@@ -6,39 +6,58 @@
     <base href="https://htmlacademy-adaptive.github.io/1490823-sedona-26/4/">
 </head>
   <body>
-    <header class="main-header">
+    <header class="header">
       <a href="index.html" class="logo">
-        <img src="img/sedona-logo.svg" width="185" height="96" alt="Логотип Седана" class="logo-img">
+        <img src="img/sedona-logo.svg" width="185" height="96" alt="Логотип Седона" class="logo-img">
       </a>
-      <nav class="main-nav">
-        <a href="index.html#popup-menu" class="main-nav__btn">
+      <nav class="nav">
+        <a href="index.html#popup-menu" class="nav-btn">
           <span class="visually-hidden">Открыть меню.</span>
         </a>
+        <div class="popup-menu popup-menu--hidden" id="popup-menu">
+          <button class="popup-menu__close">
+            <span class="visually-hidden">Закрыть меню</span>
+          </button>
+          <ul class="popup-menu__list">
+            <li class="popup-menu__item">
+              <a href="#" class="popup-menu__link">Главная</a>
+            </li>
+            <li class="popup-menu__item">
+              <a href="catalog.html" class="popup-menu__link">Фото и видео</a>
+            </li>
+            <li class="popup-menu__item">
+              <a href="form.html" class="popup-menu__link">Форма отзыва</a>
+            </li>
+            <li class="popup-menu__item">
+              <a href="https://htmlacademy.ru" class="popup-menu__link">HTML Academy</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
-    <section class="main-section">
-      <img src="img/sedona.svg" width="229" height="39" alt="Седона" class="main-section__img">
+    <section class="main">
+      <img src="img/sedona.svg" width="229" height="39" alt="Седона" class="main-img">
       <h1 class="visually-hidden">Каталог фото и видео из Седоны Штат Аризона.</h1>
     </section>
-    <section class="section-catalog">
-      <h2 class="section-catalog__header">
+    <section class="catalog">
+      <h2 class="catalog-header">
         Фото и видео
       </h2>
-      <p class="section-catalog__text">
+      <p class="catalog-text">
         Не можете решиться на путешествие<br>
         из-за курса? Фотографии помогут вам<br>
         забыть о политике и экономике.
       </p>
-      <ul class="section-catalog__list">
-        <li class="section-catalog__item">
+      <ul class="catalog-list">
+        <li class="catalog-item">
           <figure class="catalog-item__card">
             <a href="#" class="catalog-item__link">
               <img src="img/arizona.jpg"  width="280" height="280" alt="Неродные просторы" class="section-catalog__img">
             </a>
-            <figcaption class="card-name">Неродные просторы</figcaption>
+            <figcaption class="catalog-card__name">Неродные просторы</figcaption>
           </figure>
-          <p class="card-text">Автор фото</p>
-          <p class="card-author">Борис</p>
+          <p class="catalog-card__text">Автор фото</p>
+          <p class="catalog-card__author">Борис</p>
           <button class="card-like__btn">
             <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path opacity="0.3" d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="black"/>
@@ -51,10 +70,10 @@
             <a href="#" class="catalog-item__link">
               <img src="img/cactus.jpg"  width="280" height="280" alt="Неродные просторы" class="section-catalog__img">
             </a>
-            <figcaption class="card-name">Местная растительность</figcaption>
+            <figcaption class="catalog-card__name">Местная растительность</figcaption>
           </figure>
-          <p class="card-text">Автор фото</p>
-          <p class="card-author">Сергей</p>
+          <p class="catalog-card__text">Автор фото</p>
+          <p class="catalog-card__author">Сергей</p>
           <button class="card-like__btn">
             <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path opacity="0.3" d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="black"/>
@@ -67,10 +86,10 @@
             <a href="#" class="catalog-item__link">
               <img src="img/nord-road.jpg"  width="280" height="280" alt="Неродные просторы" class="section-catalog__img">
             </a>
-            <figcaption class="card-name">Дорога на север</figcaption>
+            <figcaption class="catalog-card__name">Дорога на север</figcaption>
           </figure>
-          <p class="card-text">Автор фото</p>
-          <p class="card-author">Пётр</p>
+          <p class="catalog-card__text">Автор фото</p>
+          <p class="catalog-card__author">Пётр</p>
           <button class="card-like__btn">
             <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path opacity="0.3" d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="black"/>
@@ -83,10 +102,10 @@
             <a href="#" class="catalog-item__link">
               <img src="img/devil-bridge.jpg"  width="280" height="280" alt="Неродные просторы" class="section-catalog__img">
             </a>
-            <figcaption class="card-name">Мост дъявола</figcaption>
+            <figcaption class="catalog-card__name">Мост дъявола</figcaption>
           </figure>
-          <p class="card-text">Автор фото</p>
-          <p class="card-author">Антон</p>
+          <p class="catalog-card__text">Автор фото</p>
+          <p class="catalog-card__author">Антон</p>
           <button class="card-like__btn">
             <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path opacity="0.3" d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="black"/>
@@ -96,46 +115,46 @@
         </li>
       </ul>
     </section>
-    <section class="section-video">
-      <h2 class="section-video__header">
+    <section class="video">
+      <h2 class="video-header">
         Всё ещё сомневаетесь?
       </h2>
-      <p class="section-video__text">
+      <p class="video-text">
         Смотрите видеопрезентацию и<br>
         скорее за билетами, пока они не<br>
         подорожали в очередной раз!
       </p>
-      <iframe width="320" height="180" src="https://www.youtube.com/embed/iT3dpjiIklU"
+      <iframe class="video-frame" width="320" height="180" src="https://www.youtube.com/embed/iT3dpjiIklU"
         title="Sedona Arizona Virtual Travel Tour HD" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
         gyroscope; picture-in-picture" allowfullscreen>
       </iframe>
     </section>
-    <footer class="main-footer">
-      <p class="main-footer__tag">#Visit Sedona</p>
+    <footer class="footer">
+      <p class="footer-tag">#Visit Sedona</p>
       <ul class="social-list">
         <li class="social-item">
           <a href="https://vk.com/htmlacademy" class="social-item__link">
-            <span class="visually-hidden">Ссылка на ВКонтакте HTML Academy.</span>
-            <img src="img/vk.svg" width="24" height="24" alt="Иконка Вконтакте HTML Academy" class="social-item__icon">
+            <span class="visually-hidden">Ссылка на ВКонтакте.</span>
+            <img src="img/vk.svg" width="24" height="24" alt="Иконка Вконтакте" class="social-item__icon">
           </a>
         </li>
         <li class="social-item">
           <a href="tg://resolve?domain=htmlacademy" class="social-item__link">
-            <span class="visually-hidden">Ссылка на Telegram HTML Academy.</span>
-            <img src="img/telegram.svg" width="24" height="24" alt="Иконка Telegram HTML Academy" class="social-item__icon">
+            <span class="visually-hidden">Ссылка на Telegram.</span>
+            <img src="img/telegram.svg" width="24" height="24" alt="Иконка Telegram" class="social-item__icon">
           </a>
         </li>
         <li class="social-item">
           <a href="https://www.youtube.com/user/htmlacademyru" class="social-item__link">
-            <span class="visually-hidden">Ссылка на Youtube HTML Academy.</span>
-            <img src="img/youtube.svg" width="20" height="14" alt="Иконка Youtube HTML Academy" class="social-item__icon">
+            <span class="visually-hidden">Ссылка на Youtube.</span>
+            <img src="img/youtube.svg" width="20" height="14" alt="Иконка Youtube" class="social-item__icon">
           </a>
         </li>
       </ul>
       <p class="main-footer__text">Разработано</p>
-      <a href="https://htmlacademy.ru" class="main-footer__link">
+      <a href="https://htmlacademy.ru" class="footer-link">
         <span class="visually-hidden">Логотип сайта разработчика.</span>
-        <img src="img/htmlacademy.svg" width="16" height="16" alt="Логотип HTMLAcademy" class="main-footer__logo">
+        <img src="img/htmlacademy.svg" width="16" height="16" alt="Логотип HTMLAcademy" class="footer-logo">
       </a>
     </footer>
   </body>

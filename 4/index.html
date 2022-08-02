@@ -6,32 +6,51 @@
     <base href="https://htmlacademy-adaptive.github.io/1490823-sedona-26/4/">
 </head>
   <body>
-    <header class="main-header">
+    <header class="header">
       <a href="#" class="logo">
-        <img src="img/sedona-logo.svg" width="185" height="96" alt="Логотип Седана" class="logo-img">
+        <img src="img/sedona-logo.svg" width="185" height="96" alt="Логотип Седона" class="logo-img">
       </a>
-      <nav class="main-nav">
-        <a href="#popup-menu" class="main-nav__btn">
+      <nav class="nav">
+        <a href="#popup-menu" class="nav-btn">
           <span class="visually-hidden">Открыть меню.</span>
         </a>
+        <div class="popup-menu popup-menu--hidden" id="popup-menu">
+          <button class="popup-menu__close">
+            <span class="visually-hidden">Закрыть меню</span>
+          </button>
+          <ul class="popup-menu__list">
+            <li class="popup-menu__item">
+              <a href="#" class="popup-menu__link">Главная</a>
+            </li>
+            <li class="popup-menu__item">
+              <a href="catalog.html" class="popup-menu__link">Фото и видео</a>
+            </li>
+            <li class="popup-menu__item">
+              <a href="form.html" class="popup-menu__link">Форма отзыва</a>
+            </li>
+            <li class="popup-menu__item">
+              <a href="https://htmlacademy.ru" class="popup-menu__link">HTML Academy</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
-    <section class="section-main">
-      <h1 class="section-main__header visually-hidden">Добро пожаловать в Седону.</h1>
-      <img src="img/text-index.svg" width="282" height="214" alt="Добро пожаловать в великолепие" class="section-main__img">
+    <section class="main">
+      <h1 class="main-header visually-hidden">Добро пожаловать в Седону.</h1>
+      <img src="img/text-index.svg" width="282" height="214" alt="Добро пожаловать в великолепие" class="main-img">
     </section>
-    <section class="section-info">
-      <h2 class="section-info__header">
+    <section class="info">
+      <h2 class="info-header">
         СЕДОНА — небольшой<br>
         городок в Аризоне,<br>
         заслуживающий большего!
       </h2>
-      <p class="section-info__text">
+      <p class="info-text">
         Рассмотрим 5 причин, по которым<br>
         Седона круче, чем Гранд Каньон!
       </p>
-      <ul class="section-info__list">
-        <li class="section-info__item">
+      <ul class="info-list">
+        <li class="info-item">
           <h3 class="info-item__header">Настоящий городок</h3>
           <p class="info-item__text">-1-</p>
           <p class="info-item__text">
@@ -59,7 +78,7 @@
                 Вы НЕ разочаруетесь!
               </p>
             </li>
-            <li class="info-inner__text">
+            <li class="info-inner__item">
               <h4 class="info-inner__header">
                 Сувениры
               </h4>
@@ -70,7 +89,7 @@
             </li>
           </ul>
         </li>
-        <li class="section-info__item">
+        <li class="info-item">
           <h3 class="info-item__header">
             Там есть мост дъявола
           </h3>
@@ -81,7 +100,7 @@
           </p>
           <img src="img/sedona-bridge.jpg" width="320" height="260" alt="Мост дъявола" class="info-item__img">
         </li>
-        <li class="section-info__item">
+        <li class="info-item">
           <h3 class="info-item__header">
             Небольшая площадь
           </h3>
@@ -91,7 +110,7 @@
             очень близко
           </p>
         </li>
-        <li class="section-info__item">
+        <li class="info-item">
           <h3 class="info-item__header">
             Красивая дорога
           </h3>
@@ -101,7 +120,7 @@
             совсем не скучно!
           </p>
         </li>
-        <li class="section-info__item">
+        <li class="info-item">
           <h3 class="info-item__header">
             Мало туристов
           </h3>
@@ -113,67 +132,48 @@
         </li>
       </ul>
     </section>
-    <section class="section-search">
-      <h2 class="section-search__header">Заинтересовались?</h2>
-      <p class="section-search__text">
+    <section class="search">
+      <h2 class="search-header">Заинтересовались?</h2>
+      <p class="search-text">
         Укажите предполагаемые даты<br>
         поездки, и мы покажем вам лучшие<br>
         предложения гостиниц в Седоне
       </p>
-      <a href="#" class="section-search__link">
+      <a href="#" class="search-link">
         Найти гостиницу
       </a>
     </section>
-    <section class="section-map">
+    <section class="map">
       <h2 class="visually-hidden">Седона на карте Штата Аризона.</h2>
-      <img src="img/arizona-map.jpg" width="320" height="350" alt="" class="section-map__img">
+      <img src="img/arizona-map.jpg" width="320" height="350" alt="" class="map-img">
     </section>
-    <footer class="main-footer">
-      <p class="main-footer__tag">#Visit Sedona</p>
+    <footer class="footer">
+      <p class="footer-tag">#Visit Sedona</p>
       <ul class="social-list">
         <li class="social-item">
           <a href="https://vk.com/htmlacademy" class="social-item__link">
-            <span class="visually-hidden">Ссылка на ВКонтакте HTML Academy.</span>
-            <img src="img/vk.svg" width="24" height="24" alt="Иконка Вконтакте HTML Academy" class="social-item__icon">
+            <span class="visually-hidden">Ссылка на ВКонтакте.</span>
+            <img src="img/vk.svg" width="24" height="24" alt="Иконка Вконтакте" class="social-item__icon">
           </a>
         </li>
         <li class="social-item">
           <a href="tg://resolve?domain=htmlacademy" class="social-item__link">
-            <span class="visually-hidden">Ссылка на Telegram HTML Academy.</span>
-            <img src="img/telegram.svg" width="24" height="24" alt="Иконка Telegram HTML Academy" class="social-item__icon">
+            <span class="visually-hidden">Ссылка на Telegram.</span>
+            <img src="img/telegram.svg" width="24" height="24" alt="Иконка Telegram" class="social-item__icon">
           </a>
         </li>
         <li class="social-item">
           <a href="https://www.youtube.com/user/htmlacademyru" class="social-item__link">
-            <span class="visually-hidden">Ссылка на Youtube HTML Academy.</span>
-            <img src="img/youtube.svg" width="20" height="14" alt="Иконка Youtube HTML Academy" class="social-item__icon">
+            <span class="visually-hidden">Ссылка на Youtube.</span>
+            <img src="img/youtube.svg" width="20" height="14" alt="Иконка Youtube" class="social-item__icon">
           </a>
         </li>
       </ul>
       <p class="main-footer__text">Разработано</p>
-      <a href="https://htmlacademy.ru" class="main-footer__link">
+      <a href="https://htmlacademy.ru" class="footer-link">
         <span class="visually-hidden">Логотип сайта разработчика.</span>
-        <img src="img/htmlacademy.svg" width="16" height="16" alt="Логотип HTMLAcademy" class="main-footer__logo">
+        <img src="img/htmlacademy.svg" width="16" height="16" alt="Логотип HTMLAcademy" class="footer-logo">
       </a>
     </footer>
-    <div class="popup-menu popup-menu--hidden" id="popup-menu">
-      <button class="popup-menu__close">
-        <span class="visually-hidden">Закрыть меню</span>
-      </button>
-      <ul class="popup-menu__list">
-        <li class="popup-menu__item">
-          <a href="#" class="popup-menu__link">Главная</a>
-        </li>
-        <li class="popup-menu__item">
-          <a href="catalog.html" class="popup-menu__link">Фото и видео</a>
-        </li>
-        <li class="popup-menu__item">
-          <a href="form.html" class="popup-menu__link">Форма отзыва</a>
-        </li>
-        <li class="popup-menu__item">
-          <a href="https://htmlacademy.ru" class="popup-menu__link">HTML Academy</a>
-        </li>
-      </ul>
-    </div>
   </body>
 </html>
