@@ -5,29 +5,48 @@
     <title>Седона, напишите отзыв</title>
   </head>
   <body>
-    <header class="main-header">
+    <header class="header">
       <a href="index.html" class="logo">
-        <img src="img/sedona-logo.svg" width="185" height="96" alt="Логотип Седана" class="logo-img">
+        <img src="img/sedona-logo.svg" width="185" height="96" alt="Логотип Седона" class="logo-img">
       </a>
-      <nav class="main-nav">
-        <a href="index.html#popup-menu" class="main-nav__btn">
+      <nav class="nav">
+        <a href="index.html#popup-menu" class="nav-btn">
           <span class="visually-hidden">Открыть меню.</span>
         </a>
+        <div class="popup-menu popup-menu--hidden" id="popup-menu">
+          <button class="popup-menu__close">
+            <span class="visually-hidden">Закрыть меню</span>
+          </button>
+          <ul class="popup-menu__list">
+            <li class="popup-menu__item">
+              <a href="#" class="popup-menu__link">Главная</a>
+            </li>
+            <li class="popup-menu__item">
+              <a href="catalog.html" class="popup-menu__link">Фото и видео</a>
+            </li>
+            <li class="popup-menu__item">
+              <a href="form.html" class="popup-menu__link">Форма отзыва</a>
+            </li>
+            <li class="popup-menu__item">
+              <a href="https://htmlacademy.ru" class="popup-menu__link">HTML Academy</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
-    <section class="main-section">
-      <img src="img/sedona.svg" width="229" height="39" alt="Седона" class="main-section__img">
+    <section class="main">
+      <img src="img/sedona.svg" width="229" height="39" alt="Седона" class="main-img">
       <h1 class="visually-hidden">Страница отзыва о путешествии в Седону.</h1>
     </section>
-    <section class="section-form">
-      <h2 class="section-form__header">Оставьте свой отзыв</h2>
-      <p class="section-form__text">
+    <section class="feedback">
+      <h2 class="feedback-header">Оставьте свой отзыв</h2>
+      <p class="feedback-text">
         Помогите нашим отелям стать лучше!<br>
         оставьте отзыв о них, а также о<br>
         посещенных вами<br>
         достопримечательностях
       </p>
-      <form class="form" name="form" action="https://echo.htmlacademy.ru" method="post">
+      <form class="feedback-form" name="form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="performance">
           <legend class="legend">Представьтесь:</legend>
           <label for="client-firstname">Имя*:
@@ -79,32 +98,32 @@
         <p class="form-info">* --обязательные поля</p>
       </form>
     </section>
-    <footer class="main-footer">
-      <p class="main-footer__tag">#Visit Sedona</p>
+    <footer class="footer">
+      <p class="footer-tag">#Visit Sedona</p>
       <ul class="social-list">
         <li class="social-item">
           <a href="https://vk.com/htmlacademy" class="social-item__link">
-            <span class="visually-hidden">Ссылка на ВКонтакте HTML Academy.</span>
-            <img src="img/vk.svg" width="24" height="24" alt="Иконка Вконтакте HTML Academy" class="social-item__icon">
+            <span class="visually-hidden">Ссылка на ВКонтакте.</span>
+            <img src="img/vk.svg" width="24" height="24" alt="Иконка Вконтакте" class="social-item__icon">
           </a>
         </li>
         <li class="social-item">
           <a href="tg://resolve?domain=htmlacademy" class="social-item__link">
-            <span class="visually-hidden">Ссылка на Telegram HTML Academy.</span>
-            <img src="img/telegram.svg" width="24" height="24" alt="Иконка Telegram HTML Academy" class="social-item__icon">
+            <span class="visually-hidden">Ссылка на Telegram.</span>
+            <img src="img/telegram.svg" width="24" height="24" alt="Иконка Telegram" class="social-item__icon">
           </a>
         </li>
         <li class="social-item">
           <a href="https://www.youtube.com/user/htmlacademyru" class="social-item__link">
-            <span class="visually-hidden">Ссылка на Youtube HTML Academy.</span>
-            <img src="img/youtube.svg" width="20" height="14" alt="Иконка Youtube HTML Academy" class="social-item__icon">
+            <span class="visually-hidden">Ссылка на Youtube.</span>
+            <img src="img/youtube.svg" width="20" height="14" alt="Иконка Youtube" class="social-item__icon">
           </a>
         </li>
       </ul>
       <p class="main-footer__text">Разработано</p>
-      <a href="https://htmlacademy.ru" class="main-footer__link">
+      <a href="https://htmlacademy.ru" class="footer-link">
         <span class="visually-hidden">Логотип сайта разработчика.</span>
-        <img src="img/htmlacademy.svg" width="16" height="16" alt="Логотип HTMLAcademy" class="main-footer__logo">
+        <img src="img/htmlacademy.svg" width="16" height="16" alt="Логотип HTMLAcademy" class="footer-logo">
       </a>
     </footer>
     <div class="modal-error modal-error--hidden">
