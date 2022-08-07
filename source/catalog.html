@@ -11,7 +11,7 @@
       </a>
       <nav class="header__navigation navigation header__navigation--hidden">
         <button class="navigation__toggle button" type="button">
-          <span class="visually-hidden">Выпадающее меню</span>
+          <span class="visually-hidden">Выпадающее меню.</span>
         </button>
         <ul class="navigation__list site-navigation">
           <li class="navigation__item">
@@ -29,92 +29,110 @@
         </ul>
       </nav>
     </header>
-    <section class="main">
-      <img src="img/sedona.svg" width="229" height="39" alt="Седона" class="main__img">
-      <h1 class="visually-hidden">Каталог фото и видео из Седоны Штат Аризона.</h1>
-    </section>
-    <section class="catalog">
-      <h2 class="catalog__title">
-        Фото и видео
-      </h2>
-      <p class="catalog__text">
-        Не можете решиться на путешествие
-        из-за курса? Фотографии помогут вам<
-        забыть о политике и экономике.
-      </p>
-      <ul class="catalog-list">
-        <li class="catalog-item">
-          <figure class="catalog-item__card">
-            <a href="#" class="catalog-item__link">
-              <img src="img/arizona.jpg"  width="280" height="280" alt="Неродные просторы" class="catalog-item__img">
-            </a>
-            <figcaption class="catalog-item__name">Неродные просторы</figcaption>
-          </figure>
-          <p class="catalog-item__text">Автор фото</p>
-          <p class="catalog-item__author">Борис</p>
-          <button class="catalog-item__btn like-btn">
-            <span class="visually-hidden">Поставить лайк.</span>
-          </button>
-          <span class="catalog-item__text like-quantity">1350</span>
-        </li>
-        <li class="catalog-item">
-          <figure class="catalog-item__card">
-            <a href="#" class="catalog-item__link">
-              <img src="img/cactus.jpg"  width="280" height="280" alt="Местная растительность" class="catalog-item__img">
-            </a>
-            <figcaption class="catalog-item__name">Местная растительность</figcaption>
-          </figure>
-          <p class="catalog-item__text">Автор фото</p>
-          <p class="catalog-item__author">Сергей</p>
-          <button class="catalog-item__btn like-btn">
-            <span class="visually-hidden">Поставить лайк.</span>
-          </button>
-          <span class="catalog-item__text like-quantity">143</span>
-        </li>
-        <li class="catalog-item">
-          <figure class="catalog-item__card">
-            <a href="#" class="catalog-item__link">
-              <img src="img/nordic-road.jpg"  width="280" height="280" alt="Дорога на север" class="catalog-item__img">
-            </a>
-            <figcaption class="catalog-item__name">Дорога на север</figcaption>
-          </figure>
-          <p class="catalog-item__text">Автор фото</p>
-          <p class="catalog-item__author">Пётр</p>
-          <button class="catalog-item__btn like-btn">
-            <span class="visually-hidden">Поставить лайк.</span>
-          </button>
-          <span class="catalog-item__text like-quantity">96</span>
-        </li>
-        <li class="catalog-item">
-          <figure class="catalog-item__card">
-            <a href="#" class="catalog-item__link">
-              <img src="img/devil-bridge.jpg"  width="280" height="280" alt="Неродные просторы" class="catalog-item__img">
-            </a>
-            <figcaption class="catalog-item__name">Мост дъявола</figcaption>
-          </figure>
-          <p class="catalog-item__text">Автор фото</p>
-          <p class="catalog-item__author">Антон</p>
-          <button class="catalog-item__btn like-btn">
-            <span class="visually-hidden">Поставить лайк.</span>
-          </button>
-          <span class="catalog-item__text like-quantity">254</span>
-        </li>
-      </ul>
-    </section>
-    <section class="video">
-      <h2 class="video__title">
-        Всё ещё сомневаетесь?
-      </h2>
-      <p class="video__text">
-        Смотрите видеопрезентацию и
-        скорее за билетами, пока они не
-        подорожали в очередной раз!
-      </p>
-      <iframe class="video__frame" width="320" height="180" src="https://www.youtube.com/embed/iT3dpjiIklU"
-        title="Sedona Arizona Virtual Travel Tour HD" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-        gyroscope; picture-in-picture" allowfullscreen>
-      </iframe>
-    </section>
+    <main class="catalog-block">
+      <section class="main">
+        <img src="img/sedona.svg" width="229" height="39" alt="Седона" class="main__img">
+        <h1 class="visually-hidden">Каталог фото и видео из Седоны Штат Аризона.</h1>
+      </section>
+      <section class="catalog">
+        <h2 class="catalog__title">
+          Фото и видео
+        </h2>
+        <p class="catalog__text">
+          Не можете решиться на путешествие
+          из-за курса? Фотографии помогут вам
+          забыть о политике и экономике.
+        </p>
+        <ul class="catalog-list">
+          <li class="catalog-item">
+            <figure class="catalog-item__card">
+              <a href="#" class="catalog-item__link">
+                <img src="img/arizona.jpg"  width="280" height="280" alt="Неродные просторы" class="catalog-item__img">
+              </a>
+              <figcaption class="catalog-item__name">
+                <a href="#" class="catalog-item__link">Неродные просторы</a>
+                <p class="catalog-item__text">Автор фото</p>
+                <p class="catalog-item__author">Борис</p>
+              </figcaption>
+            </figure>
+            <button class="catalog-item__btn like-btn">
+              <span class="visually-hidden">Поставить отметку "Нравится".</span>
+            </button>
+            <span class="visually-hidden">Количество отметок "Нравится":</span>
+            <span class="catalog-item__text like-quantity">1350</span>
+          </li>
+          <li class="catalog-item">
+            <figure class="catalog-item__card">
+              <a href="#" class="catalog-item__link">
+                <img src="img/cactus.jpg"  width="280" height="280" alt="Местная растительность" class="catalog-item__img">
+              </a>
+              <figcaption class="catalog-item__name">
+                <a href="#" class="catalog-item__link">Местная растительность</a>
+                <p class="catalog-item__text">Автор фото</p>
+                <p class="catalog-item__author">Сергей</p>
+              </figcaption>
+            </figure>
+            <button class="catalog-item__btn ">
+              <span class="visually-hidden">Поставить отметку "Нравится".</span>
+            </button>
+            <span class="visually-hidden">Количество отметок "Нравится":</span>
+            <span class="catalog-item__text like-quantity">143</span>
+          </li>
+          <li class="catalog-item">
+            <figure class="catalog-item__card">
+              <a href="#" class="catalog-item__link">
+                <img src="img/nordic-road.jpg"  width="280" height="280" alt="Дорога на север" class="catalog-item__img">
+              </a>
+              <figcaption class="catalog-item__name">
+                <a href="#" class="catalog-item__link">
+                  Дорога на север
+                </a>
+                <p class="catalog-item__text">Автор фото</p>
+                <p class="catalog-item__author">Пётр</p>
+              </figcaption>
+            </figure>
+            <button class="catalog-item__btn like-btn">
+              <span class="visually-hidden">Поставить отметку "Нравится".</span>
+            </button>
+            <span class="visually-hidden">Количество отметок "Нравится":</span>
+            <span class="catalog-item__text like-quantity">96</span>
+          </li>
+          <li class="catalog-item">
+            <figure class="catalog-item__card">
+              <a href="#" class="catalog-item__link">
+                <img src="img/devil-bridge.jpg"  width="280" height="280" alt="Неродные просторы" class="catalog-item__img">
+              </a>
+              <figcaption class="catalog-item__name">
+                <a href="#" class="catalog-item__link">
+                  Мост дъявола
+                </a>
+                <p class="catalog-item__text">Автор фото</p>
+                <p class="catalog-item__author">Антон</p>
+              </figcaption>
+            </figure>
+            <button class="catalog-item__btn like-btn">
+              <span class="visually-hidden">Поставить отметку "Нравится".</span>
+            </button>
+            <span class="visually-hidden">Количество отметок "Нравится":</span>
+            <span class="catalog-item__text like-quantity">254</span>
+          </li>
+        </ul>
+      </section>
+      <section class="video">
+        <h2 class="video__title">
+          Всё ещё сомневаетесь?
+        </h2>
+        <p class="video__text">
+          Смотрите видеопрезентацию и
+          скорее за билетами, пока они не
+          подорожали в очередной раз!
+        </p>
+        <iframe class="video__frame" width="320" height="180" src="https://www.youtube.com/embed/iT3dpjiIklU"
+          title="Sedona Arizona Virtual Travel Tour HD" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+          gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+      </section>
+    </main>
     <footer class="footer">
       <section class="footer-social social">
         <h2 class="visually-hidden">Мы в соцсетях</h2>
