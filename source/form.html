@@ -35,63 +35,63 @@
         <h1 class="visually-hidden">Страница отзыва о путешествии в Седону.</h1>
       </section>
       <section class="feedback">
-        <h2 class="feedback__title">Оставьте свой отзыв</h2>
+        <h2 class="feedback__title title-style">Оставьте свой отзыв</h2>
         <p class="feedback__text">
           Помогите нашим отелям стать лучше!
           оставьте отзыв о них, а также о
           посещенных вами
           достопримечательностях
         </p>
-        <form class="feedback__form" name="form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="feedback__performance">
-            <legend class="feedback__legend">Представьтесь:</legend>
-            <label for="client-firstname">Имя*:
-              <input type="text" placeholder="Пётр" required name="client-firstname" class="feedback__input client-firstname" id="client-firstname">
+        <form class="feedback__form form" name="form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="form__fieldset fieldset fieldset-style">
+            <legend class="fieldset__title title-style">Представьтесь:</legend>
+            <label class="fieldset__label" for="client-firstname">Имя*:
+              <input type="text" placeholder="Пётр" required name="client-firstname" class="fieldset__input input-field" id="client-firstname">
             </label>
-            <label for="client-lastname">Фамилия*:
-              <input type="text" placeholder="Пустота" required name="client-lastname" class="feedback__input client-lastname" id="client-lastname">
+            <label class="fieldset__label" for="client-lastname">Фамилия*:
+              <input type="text" placeholder="Пустота" required name="client-lastname" class="fieldset__input input-field" id="client-lastname">
             </label>
-            <label for="client-middle-name">Отчество:
-              <input type="text" placeholder="Викторович" name="client-middle-name" class="feedback__input client-middle-name" id="client-middle-name">
-            </label>
-          </fieldset>
-          <fieldset class="feedback__contacts">
-            <legend class="feedback__legend">Контактная информация:</legend>
-            <label for="client-phone">Контактный телефон*:
-              <input type="tel" placeholder="Введите телефон" required name="client-phone" class="feedback__input client-phone" id="client-phone">
-            </label>
-            <label for="client-email">Электронная почта*:
-              <input type="email" placeholder="Введите email" required name="client-email" class="feedback__input client-email" id="client-email">
+            <label class="fieldset__label" for="client-middle-name">Отчество:
+              <input type="text" placeholder="Викторович" name="client-middle-name" class="fieldset__input input-field" id="client-middle-name">
             </label>
           </fieldset>
-          <fieldset class="feedback__impression">
-            <legend class="feedback__legend">Ваше общее впечатление:</legend>
-            <input type="radio" checked name="impression" class="feedback__radio" id="impression-good">
-            <label for="impression-good">Скорее положительное</label>
-            <input type="radio" name="impression" class="feedback__radio" id="impression-bad">
-            <label for="impression-bad">Скорее отрицательное</label>
-            <input type="radio" name="impression" class="feedback__radio" id="impression-unknown">
-            <label for="impression-unknown">Затрудняюсь ответить</label>
+          <fieldset class="form__fieldset fieldset fieldset-style">
+            <legend class="fieldset__title title-style">Контактная информация:</legend>
+            <label class="fieldset__label" for="client-phone">Контактный телефон*:
+              <input type="tel" placeholder="Введите телефон" required name="client-phone" class="fieldset__input input-field" id="client-phone">
+            </label>
+            <label class="fieldset__label" for="client-email">Электронная почта*:
+              <input type="email" placeholder="Введите email" required name="client-email" class="fieldset__input input-field" id="client-email">
+            </label>
           </fieldset>
-          <fieldset class="feedback__places">
-            <legend class="feedback__legend">Посещенные достопримечательности:</legend>
-            <input type="checkbox" checked name="devil-bridge" class="feedback__checkbox" id="devil-bridge">
-            <label for="devil-bridge">Мост Дъявола</label>
-            <input type="checkbox" checked name="bell-rock" class="feedback__checkbox" id="bell-rock">
-            <label for="bell-rock">Гора-Колокол</label>
-            <input type="checkbox" checked name="slide-park" class="feedback__checkbox" id="slide-park">
-            <label for="slide-park">Слайд-парк</label>
-            <input type="checkbox" name="red-rocks" class="feedback__checkbox" id="red-rocks">
-            <label for="red-rocks">Красные скалы</label>
+          <fieldset class="form__fieldset fieldset fieldset-style">
+            <legend class="fieldset__title title-style">Ваше общее впечатление:</legend>
+            <input type="radio" checked name="impression" class="fieldset__radio input-radio" id="impression-good">
+            <label class="fieldset__label" for="impression-good">Скорее положительное</label>
+            <input type="radio" name="impression" class="fieldset__radio input-radio" id="impression-bad">
+            <label class="fieldset__label" for="impression-bad">Скорее отрицательное</label>
+            <input type="radio" name="impression" class="fieldset__radio input-radio" id="impression-unknown">
+            <label class="fieldset__label" for="impression-unknown">Затрудняюсь ответить</label>
           </fieldset>
-          <fieldset class="feedback__emotion">
-            <label for="emotion">Опишите свои эмоции:</label>
-            <textarea rows="5" cols="20" name="emotion" class="emotion" id="emotion">
+          <fieldset class="form__fieldset fieldset fieldset-style">
+            <legend class="fieldset__title title-style">Посещенные достопримечательности:</legend>
+            <input type="checkbox" checked name="devil-bridge" class="fieldset__checkbox input-checkbox" id="devil-bridge">
+            <label class="fieldset__label" for="devil-bridge">Мост Дъявола</label>
+            <input type="checkbox" checked name="bell-rock" class="fieldset__checkbox input-checkbox" id="bell-rock">
+            <label class="fieldset__label" for="bell-rock">Гора-Колокол</label>
+            <input type="checkbox" checked name="slide-park" class="fieldset__checkbox input-checkbox" id="slide-park">
+            <label class="fieldset__label" for="slide-park">Слайд-парк</label>
+            <input type="checkbox" name="red-rocks" class="fieldset__checkbox input-checkbox" id="red-rocks">
+            <label class="fieldset__label" for="red-rocks">Красные скалы</label>
+          </fieldset>
+          <fieldset class="form__fieldset fieldset fieldset-style">
+            <label class="fieldset__label" for="emotion">Опишите свои эмоции:</label>
+            <textarea rows="5" cols="20" name="emotion" class="fieldset__text input-text" id="emotion">
               Опишите подробно все свои восторги
             </textarea>
           </fieldset>
-          <button class="feedback__btn" type="submit">Отправить отзыв</button>
-          <p class="feedback__info">* --обязательные поля</p>
+          <button class="form__button button" type="submit">Отправить отзыв</button>
+          <p class="form__info">* --обязательные поля</p>
         </form>
       </section>
     </main>
@@ -118,7 +118,7 @@
         </ul>
       </section>
       <section class="footer-copyright copyright">
-        <h2 class="copyright__title">Разработано</h2>
+        <h2 class="copyright__title title-style">Разработано</h2>
         <a href="https://htmlacademy.ru" class="copyright__link">
           <svg class="copyright__logo" width="27" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path fill="#2E368F" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
           </svg>
@@ -126,7 +126,7 @@
       </section>
     </footer>
     <div class="modal-error modal-error--hidden">
-      <h2 class="modal-error__title">Что-то пошло не так!</h2>
+      <h2 class="modal-error__title title-style">Что-то пошло не так!</h2>
       <p class="modal-error__info">
         Проверьте поля, выделенные
         красным, скорее всего вы
@@ -135,7 +135,7 @@
       <button class="modal-error__btn button">Ок</button>
     </div>
     <div class="modal-good modal-good--hidden">
-      <h2 class="modal-good__title">Ваш отзыв отправлен!</h2>
+      <h2 class="modal-good__title title-style">Ваш отзыв отправлен!</h2>
     <p class="modal-good__info">
       Спасибо за ваше участие, ваш
       отзыв уже поступил к нам.
