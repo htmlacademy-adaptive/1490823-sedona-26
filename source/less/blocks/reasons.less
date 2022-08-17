@@ -23,6 +23,19 @@
   font-weight: 700;
   line-height: 1.44;
   color: #ffffff;
+  position: relative;
+}
+.reasons__title::after{
+  position: absolute;
+  top: 37px;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  counter-increment: numeration;
+  content: "- №" counter(numeration) " -";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
 }
 .reasons__text{
   margin: 0 0 38px 0; ;
@@ -54,10 +67,14 @@
   line-height: 1.44;
 }
 .reasons__text--view{
-  color:#000000;
+  color:#333333;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
 }
+.reasons{
+  counter-reset: reasons__title;
+}
+
 
 

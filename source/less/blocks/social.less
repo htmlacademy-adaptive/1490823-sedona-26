@@ -3,13 +3,38 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 38px 0 35px;
+  padding: 38px 0 40px;
+  &__hashtag{
+    margin-bottom: 33px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.44;
+  }
   &__list{
     margin:0;
-    padding:0;
+    padding: 0;
     list-style-type: none;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  &__link{
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: #81B3D2;
+    position: relative;
+  }
+  &__img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__link--center{
+    margin: 0 6px;
   }
 }

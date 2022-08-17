@@ -1,22 +1,14 @@
-.navigation{
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-}
-.navigation__toggle{
-  width: 56px;
-  height: 56px;
-  background: url("../../img/burger-button.svg") center no-repeat;
-  align-self: flex-end;
-  cursor: pointer;
-}
 .navigation__list{
   list-style-type: none;
   padding: 0;
   margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
 }
 .navigation__link{
-  margin-bottom: 1px;
   display: block;
   width: 100%;
   padding: 17px 0 12px;
@@ -30,3 +22,7 @@
   font-weight: 700;
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
+.navigation--hidden{
+  display: none;
+}
+
