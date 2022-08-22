@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <title>Седона, напишите отзыв</title>
   </head>
-  <body>
+  <body class="body">
     <div class="container">
       <header class="header">
         <a href="index.html" class="header__logo">
@@ -18,7 +18,7 @@
 
         <!--  Javascript, при нажатии на кнопку "бургер-меню", добавляет класс header__button--toggle в тег "button" и убирает класс "navigation__list--hidden"в теге "ul" -->
 
-        <button class="header__button header__button--toggle" type="button">
+        <button class="header__button" type="button">
           <span class="visually-hidden">Выпадающее меню.</span>
         </button>
 
@@ -61,24 +61,23 @@
           </p>
         </section>
         <section class="feedback">
+          <h3 class=visually-hidden>Заполните форму отзыва о путешесвии.</h3>
           <form class="feedback__form form" name="form" action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="form__fieldset fieldset">
               <legend class="fieldset__title">Представьтесь:</legend>
               <ul class="fieldset__list">
                 <li class="fieldset__item">
-                  <label class="fieldset__label" for="client-firstname">Имя*:
-                    <input type="text" placeholder="Пётр" required name="client-firstname" class="fieldset__input fieldset__input--view" id="client-firstname">
-                  </label>
+                  <label class="fieldset__label" for="client-firstname">
+                    Имя*:</label>
+                  <input type="text" placeholder="Пётр" required name="client-firstname" class="fieldset__input fieldset__input--view" id="client-firstname">
                 </li>
                 <li class="fieldset__item">
-                  <label class="fieldset__label" for="client-lastname">Фамилия*:
-                    <input type="text" placeholder="Пустота" required name="client-lastname" class="fieldset__input fieldset__input--view" id="client-lastname">
-                  </label>
+                  <label class="fieldset__label" for="client-lastname">Фамилия*:</label>
+                  <input type="text" placeholder="Пустота" required name="client-lastname" class="fieldset__input fieldset__input--view" id="client-lastname">
                 </li>
                 <li class="fieldset__item">
-                  <label class="fieldset__label" for="client-middle-name">Отчество:
-                    <input type="text" placeholder="Викторович" name="client-middle-name" class="fieldset__input fieldset__input--view" id="client-middle-name">
-                  </label>
+                  <label class="fieldset__label" for="client-middle-name">Отчество:</label>
+                  <input type="text" placeholder="Викторович" name="client-middle-name" class="fieldset__input fieldset__input--view" id="client-middle-name">
                 </li>
               </ul>
             </fieldset>
@@ -86,14 +85,12 @@
               <legend class="fieldset__title">Контактная информация:</legend>
               <ul class="fieldset__list">
                 <li class="fieldset__item">
-                  <label class="fieldset__label" for="client-phone">Контактный телефон*:
-                    <input type="tel" placeholder="Введите телефон" required name="client-phone" class="fieldset__input fieldset__input--view" id="client-phone">
-                  </label>
+                  <label class="fieldset__label" for="client-phone">Контактный телефон*:</label>
+                  <input type="tel" placeholder="Введите телефон" required name="client-phone" class="fieldset__input fieldset__input--view" id="client-phone">
                 </li>
                 <li class="fieldset__item">
-                  <label class="fieldset__label" for="client-email">Электронная почта*:
-                    <input type="email" placeholder="Введите email" required name="client-email" class="fieldset__input fieldset__input--view" id="client-email">
-                  </label>
+                  <label class="fieldset__label" for="client-email">Электронная почта*:</label>
+                  <input type="email" placeholder="Введите email" required name="client-email" class="fieldset__input fieldset__input--view" id="client-email">
                 </li>
               </ul>
             </fieldset>
@@ -115,7 +112,7 @@
               </ul>
             </fieldset>
             <fieldset class="form__fieldset fieldset">
-              <legend class="fieldset__title">Посещенные достопримечательности:</legend>
+              <legend class="fieldset__title">Посещённые достопримечательности:</legend>
               <ul class="fieldset__list">
                 <li class="fieldset__item">
                   <input type="checkbox" checked name="devil-bridge" class="fieldset__checkbox fieldset__checkbox--view" id="devil-bridge">
@@ -136,13 +133,12 @@
               </ul>
             </fieldset>
             <fieldset class="form__fieldset fieldset">
-              <label class="fieldset__label" for="emotion">Опишите свои эмоции:</label>
-              <textarea rows="5" cols="20" name="emotion" class="fieldset__text fieldset__text--view" id="emotion">
-                Опишите подробно все свои восторги
+              <label class="fieldset__title" for="emotion">Опишите свои эмоции:</label>
+              <textarea name="emotion" class="fieldset__textarea" placeholder="Опишите подробно все свои восторги" id="emotion">
               </textarea>
             </fieldset>
-            <button class="form__button button" type="submit">Отправить отзыв</button>
-            <p class="form__info">* --обязательные поля</p>
+            <button class="button form__button" type="submit">Отправить отзыв</button>
+            <p class="form__info">* -обязательные поля</p>
           </form>
         </section>
       </main>
@@ -199,7 +195,7 @@
           красным, скорее всего вы
           забыли их заполнить
         </p>
-        <button class="modal__btn button">Ок</button>
+        <button class="button modal__button">Ок</button>
       </div>
       <div class="modal modal--hidden">
         <h2 class="modal__title">Ваш отзыв отправлен!</h2>
@@ -209,7 +205,7 @@
           В ближайшее время мы
           опубликуем его на сайте.
         </p>
-        <button class="modal__btn button">
+        <button class="button modal__button modal__button--width">
           Закрыть окно
         </button>
       </div>
