@@ -6,7 +6,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  &__img{
+  .main__img{
     padding-top: 56px;
     padding-bottom: 110px;
     display: block;
@@ -17,38 +17,11 @@
     display: block;
     content: "";
     position: absolute;
-    width: 160px;
-    height: 57px;
-    background: url("../../img/triangle.svg") center no-repeat;
-    left: 50%;
-    bottom: 0;
-    z-index: 1;
-  }
-  &::before{
-    display: block;
-    content: "";
-    position: absolute;
-    width: 160px;
-    height: 57px;
-    background: url("../../img/triangle.svg") center no-repeat;
-    right: 50%;
-    bottom: 0;
-    z-index: 1;
-    transform: scaleX(-1);
-  }
-}
-@media (min-width: @tablet-width){
-  .main{
-    background-image: url("../../img/back-tablet.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .main::after{
-    width: 768px;
-    background: url("../../img/tablet-frame.svg") center no-repeat;
-    right: 0;
+    height: 56px;
+    background: url("../../img/frame.svg") center no-repeat;
     left: 0;
-    z-index: 2;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
   }
 }
