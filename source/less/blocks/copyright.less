@@ -3,20 +3,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 0;
+  }
 }
-.copyright__title{
-  margin:0;
+
+.copyright__title {
+  margin: 0;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 1.5;
 }
-.copyright__link{
+
+.copyright__link {
   display: block;
   width: 27px;
   height: 32px;
-}
-@media (min-width: @tablet-width) {
-  .copyright{
-    padding-bottom: 0;
-  }
 }

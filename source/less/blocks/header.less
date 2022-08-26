@@ -1,46 +1,47 @@
-.header{
+.header {
   width: 100%;
   height: 56px;
   position: relative;
-  &__logo{
-    width: 185px;
-    height: 96px;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    z-index: 1;
-    transform: translate(-50%, 0);
-  }
-  &__button{
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 3;
-    width: 56px;
-    height: 56px;
-    background: url("../../img/burger-button.svg") center no-repeat;
-    cursor: pointer;
-    border: 0;
-    padding: 0;
-  }
-  &__button--toggle{
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 3;
-    width: 56px;
-    height: 56px;
-    background: url("../../img/icon-cross.svg") center no-repeat;
-    cursor: pointer;
-  }
-}
-@media (min-width: @tablet-width){
-  .header{
-    width: 100%;
+  @media (min-width: @tablet-width) {
     position: inherit;
   }
-  .header__button{
+}
+
+.header-logo {
+  width: 185px;
+  height: 96px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, 0);
+}
+
+.header__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  width: 56px;
+  height: 57px;
+  background: url("../../img/burger-button.svg") center no-repeat;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
     display: none;
   }
+}
+
+.header__button--toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  width: 56px;
+  height: 56px;
+  background: url("../../img/icon-cross.svg") center no-repeat;
+  cursor: pointer;
 }

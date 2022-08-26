@@ -1,19 +1,13 @@
-.main{
+.main {
   width: 100%;
-  background-color: #81B3D2;
-  background-image: url("../../img/back-tablet.jpg");
+  background-color: #81b3d2;
+  background-image: url("../../img/back-desktop.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  .main__img{
-    padding-top: 56px;
-    padding-bottom: 110px;
-    display: block;
-    width: 100%;
-    margin-bottom: 39px;
-  }
-  &::after{
+
+  &::after {
     display: block;
     content: "";
     position: absolute;
@@ -21,7 +15,15 @@
     background: url("../../img/frame.svg") center no-repeat;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -1px;
     z-index: 1;
   }
+}
+
+.main__img {
+  padding-top: 56px;
+  padding-bottom: 110px;
+  display: block;
+  width: 100%;
+  margin-bottom: 39px;
 }
