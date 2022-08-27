@@ -1,5 +1,6 @@
 .navigation {
   position: relative;
+
   @media (min-width: @tablet-width) {
     width: 100%;
     height: 100%;
@@ -15,9 +16,10 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
 
   @media (min-width: @tablet-width) {
+    position: inherit;
     display: flex;
     width: auto;
     color: #000000;
@@ -25,6 +27,14 @@
     font-size: 14px;
     line-height: 1.5;
     background: none;
+  }
+}
+
+.navigation__list--hidden {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
   }
 }
 
