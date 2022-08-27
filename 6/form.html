@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -10,16 +10,16 @@
     <title>Седона, напишите отзыв</title>
     <base href="https://htmlacademy-adaptive.github.io/1490823-sedona-26/6/">
 </head>
-  <body class="body">
+  <body class="page__body">
     <div class="container">
       <header class="header">
-        <a href="index.html" class="header__logo">
-          <img src="img/sedona-logo.svg" width="185" height="96" alt="Логотип Седона" class="header__logo-img">
+        <a href="index.html" class="header-logo">
+          <img src="img/sedona-logo.svg" width="185" height="96" alt="Логотип Седона" class="header-logo__img">
         </a>
 
         <!--  Javascript, при нажатии на кнопку "бургер-меню", добавляет класс header__button--toggle в тег "button" и убирает класс "navigation__list--hidden"в теге "ul" -->
 
-        <button class="header__button" type="button">
+        <button class="burger-button" type="button">
           <span class="visually-hidden">Выпадающее меню.</span>
         </button>
 
@@ -31,7 +31,7 @@
             <li class="navigation__item">
               <a href="index.html" class="navigation__link">Главная</a>
             </li>
-            <li class="navigation__item">
+            <li class="navigation__item navigation__item--margin">
               <a href="catalog.html" class="navigation__link">Фото и видео</a>
             </li>
             <li class="navigation__item">
@@ -65,7 +65,7 @@
           <h3 class=visually-hidden>Заполните форму отзыва о путешесвии.</h3>
           <form class="feedback__form form" name="form" action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="form__fieldset fieldset">
-              <legend class="fieldset__title">Представьтесь:</legend>
+              <h4 class="fieldset__title">Представьтесь:</h4>
               <ul class="fieldset__list">
                 <li class="fieldset__item">
                   <label class="fieldset__label" for="client-firstname">
@@ -83,7 +83,7 @@
               </ul>
             </fieldset>
             <fieldset class="form__fieldset fieldset">
-              <legend class="fieldset__title">Контактная информация:</legend>
+              <h4 class="fieldset__title">Контактная информация:</h4>
               <ul class="fieldset__list">
                 <li class="fieldset__item">
                   <label class="fieldset__label" for="client-phone">Контактный телефон*:</label>
@@ -96,7 +96,7 @@
               </ul>
             </fieldset>
             <fieldset class="form__fieldset fieldset">
-              <legend class="fieldset__title">Ваше общее впечатление:</legend>
+              <h4 class="fieldset__title">Ваше общее впечатление:</h4>
               <ul class="fieldset__list">
                 <li class="fieldset__item">
                   <input type="radio" checked name="impression" class="fieldset__radio fieldset__radio--view" id="impression-good">
@@ -113,7 +113,7 @@
               </ul>
             </fieldset>
             <fieldset class="form__fieldset fieldset">
-              <legend class="fieldset__title">Посещённые достопримечательности:</legend>
+              <h4 class="fieldset__title">Посещённые достопримечательности:</h4>
               <ul class="fieldset__list">
                 <li class="fieldset__item">
                   <input type="checkbox" checked name="devil-bridge" class="fieldset__checkbox fieldset__checkbox--view" id="devil-bridge">
@@ -144,7 +144,7 @@
         </section>
       </main>
       <footer class="footer">
-        <section class="footer-social social">
+        <section class="footer__social social">
           <h2 class="visually-hidden">Мы в соцсетях.</h2>
           <a href="#" class="social__hashtag">#Visit Sedona</a>
           <ul class="social__list">
@@ -181,7 +181,7 @@
             </li>
           </ul>
         </section>
-        <section class="footer-copyright copyright">
+        <section class="footer__copyright copyright">
           <h2 class="copyright__title">Разработано</h2>
           <a href="https://htmlacademy.ru" class="copyright__link">
             <svg class="copyright__logo" width="27" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path fill="#000000" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
