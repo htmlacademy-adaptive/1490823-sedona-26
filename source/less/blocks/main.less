@@ -1,0 +1,35 @@
+.main {
+  width: 100%;
+  background-color: #81b3d2;
+  background-image: url("../../img/back-desktop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    height: 56px;
+    background: url("../../img/frame.svg") center no-repeat;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+}
+
+.main__img {
+  display: block;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 80px 0 95px;
+
+  @media (min-width: @tablet-width) {
+    padding: 65px 0 100px;
+    width: 50%;
+    height: 50%;
+  }
+}
