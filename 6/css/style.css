@@ -406,7 +406,8 @@ select {
     height: 50%;
   }
 }
-.map {
+.map__iframe {
+  display: block;
   width: 100%;
 }
 .modal {
