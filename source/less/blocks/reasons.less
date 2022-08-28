@@ -5,6 +5,28 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 37px;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: 3;
+    background: url("../../img/reasons-frame.svg") center no-repeat;
+    background-size: 100%;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.reasons__sub-list {
+  padding: 25px 0 52px;
 }
 
 .reasons__img {
