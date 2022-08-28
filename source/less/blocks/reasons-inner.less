@@ -5,15 +5,25 @@
   background: #ffffff;
   list-style-type: none;
   padding: 25px 0 20px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
 }
 
 .reasons-inner__title {
   margin: 0;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 130px;
+    margin: 0 0 20px 0;
+  }
 }
 
 .reasons-inner__text {
   margin: 0 0 30px 0;
+  padding: 0 35px;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 1.5;
@@ -24,11 +34,29 @@
 .reasons-inner__item {
   padding-left: 65px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .reasons-inner__img {
+  width: 40px;
+  height: 40px;
   position: absolute;
   top: -13px;
   left: 18px;
   z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    width: 75px;
+    height: 75px;
+    left: 50%;
+    top: 60px;
+    transform: translate(-50%, -50%);
+  }
 }

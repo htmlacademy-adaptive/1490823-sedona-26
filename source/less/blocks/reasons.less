@@ -7,6 +7,11 @@
   justify-content: center;
   position: relative;
 
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   &::before {
     display: block;
     content: "";
