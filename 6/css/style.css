@@ -1,3 +1,99 @@
+@font-face {
+  font-family: "PT Sans";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
+}
+@font-face {
+  font-family: "PT Sans";
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
+}
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Убираем внутренние отступы и точки*/
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: 0;
+}
+.burger-button {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 56px;
+  height: 57px;
+  background: url("../../img/burger-button.svg") center no-repeat;
+  cursor: pointer;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .burger-button {
+    display: none;
+  }
+}
+.burger-button__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  width: 56px;
+  height: 56px;
+  background: url("../../img/icon-cross.svg") center no-repeat;
+  cursor: pointer;
+}
 .button {
   display: block;
   margin: 0 auto;
@@ -208,20 +304,6 @@
   outline-offset: 0;
   background: #f2f2f2;
 }
-@font-face {
-  font-family: "PT Sans";
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-  src: url("../../fonts/ptsans.woff2") format("woff2"), url("../../fonts/ptsans.woff") format("woff");
-}
-@font-face {
-  font-family: "PT Sans";
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-  src: url("../../fonts/ptsansbold.woff2") format("woff2"), url("../../fonts/ptsansbold.woff") format("woff");
-}
 @media (min-width: 768px) {
   .footer {
     display: flex;
@@ -239,17 +321,16 @@
   margin: 0;
   padding-right: 33px;
   text-align: right;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.75;
   color: rgba(51, 51, 51, 0.6);
 }
 .header {
   width: 100%;
   height: 56px;
   position: relative;
-}
-@media (min-width: 768px) {
-  .header {
-    position: inherit;
-  }
 }
 .header-logo {
   width: 185px;
@@ -258,42 +339,15 @@
   position: absolute;
   top: 0;
   left: 50%;
-  z-index: 1;
-  transform: translate(-50%, 0);
-}
-.burger-button {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 56px;
-  height: 57px;
-  background: url("../../img/burger-button.svg") center no-repeat;
-  cursor: pointer;
-  padding: 0;
-}
-@media (min-width: 768px) {
-  .burger-button {
-    display: none;
-  }
-}
-.burger-button__toggle {
-  position: absolute;
-  top: 0;
-  right: 0;
   z-index: 3;
-  width: 56px;
-  height: 56px;
-  background: url("../../img/icon-cross.svg") center no-repeat;
-  cursor: pointer;
+  transform: translate(-50%, 0);
 }
 .info {
   padding-top: 32px;
   text-align: center;
 }
 .info__title {
-  margin: 0 0 35px 0;
+  margin-bottom: 35px;
   text-transform: uppercase;
   font-size: 18px;
   line-height: 1.44;
@@ -339,11 +393,18 @@
   z-index: 1;
 }
 .main__img {
-  padding-top: 56px;
-  padding-bottom: 110px;
   display: block;
-  width: 100%;
-  margin-bottom: 39px;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 80px 0 95px;
+}
+@media (min-width: 768px) {
+  .main__img {
+    padding: 65px 0 100px;
+    width: 50%;
+    height: 50%;
+  }
 }
 .map {
   width: 100%;
@@ -395,7 +456,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 3;
+  z-index: 5;
 }
 @media (min-width: 768px) {
   .navigation__list {
@@ -451,61 +512,6 @@
     margin-right: 180px;
   }
 }
-/* Указываем box sizing */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-/* Убираем внутренние отступы и точки*/
-ul[class],
-ol[class] {
-  padding: 0;
-  list-style: none;
-}
-/* Убираем внешние отступы */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-/* Выставляем основные настройки по-умолчанию для body */
-body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-}
-/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
-a:not([class]) {
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
-}
-/* Упрощаем работу с изображениями */
-img {
-  max-width: 100%;
-  display: block;
-}
-/* Наследуем шрифты для инпутов и кнопок */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-  border: none;
-}
 .page__body {
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
@@ -521,6 +527,27 @@ select {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+}
+.reasons__list::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 37px;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  z-index: 3;
+  background: url("../../img/reasons-frame.svg") center no-repeat;
+  background-size: 100%;
+}
+@media (min-width: 768px) {
+  .reasons__list::before {
+    display: none;
+  }
+}
+.reasons__sub-list {
+  padding: 25px 0 52px;
 }
 .reasons__img {
   display: block;
@@ -600,7 +627,7 @@ select {
   justify-content: flex-start;
   background: #ffffff;
   list-style-type: none;
-  padding: 0;
+  padding: 25px 0 20px;
 }
 .reasons-inner__title {
   margin: 0;
