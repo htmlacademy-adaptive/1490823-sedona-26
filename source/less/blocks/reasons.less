@@ -1,3 +1,7 @@
+.reasons {
+  counter-reset: reasons__title;
+}
+
 .reasons__list {
   list-style-type: none;
   padding: 0;
@@ -59,7 +63,11 @@
     justify-content: center;
   }
 }
-
+.reasons__item--order {
+  @media (min-width: @tablet-width) {
+    flex-direction: row-reverse;
+  }
+}
 .reasons__item--view {
   background: #eeeeee;
   position: relative;
@@ -151,8 +159,4 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
-}
-
-.reasons {
-  counter-reset: reasons__title;
 }
