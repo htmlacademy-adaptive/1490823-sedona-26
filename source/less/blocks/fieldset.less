@@ -1,5 +1,5 @@
 .fieldset {
-  width: auto;
+  width: 100%;
   padding: 25px 0 40px 0;
   margin: 0;
   border: 0;
@@ -10,6 +10,17 @@
   text-transform: uppercase;
   position: relative;
   font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    border-top: 0;
+  }
+}
+
+.fieldset--position{
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
 }
 
 .fieldset__list {
@@ -28,10 +39,16 @@
 }
 
 .fieldset__item {
+  width: 100%;
   text-align: left;
-  padding: 20px;
+  padding: 20px 0;
   display: flex;
   flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .fieldset__label {
@@ -40,11 +57,15 @@
   font-weight: 400;
   line-height: 1.5;
   color: #333333;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 50px;
+  }
 }
 
 .fieldset__input {
   display: block;
-  width: 87%;
+  width: 100%;
   margin: 0;
   border: 0;
   padding: 16px;
@@ -54,15 +75,19 @@
   line-height: 1.44;
   color: #000000;
   background: #f2f2f2;
-  text-align: left;
+  align-self: center;
+
+  @media (min-width: @tablet-width) {
+    width: 80%;
+    align-self: center;
+  }
 }
 
 .fieldset__textarea {
   display: block;
+  width: 100%;
   margin: 0 auto;
-  width: 83%;
   min-height: 150px;
-  padding: 16px;
   border: 0;
   outline: none;
   outline-offset: 0;

@@ -40,15 +40,17 @@
 }
 
 .card__name {
+  width: 100%;
   padding-top: 15px;
-  width: 280px;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
     width: 100%;
+    flex-direction: row;
     justify-content: space-between;
     padding: 30px 20px;
     background: #e5e5e5;
@@ -68,10 +70,9 @@
 }
 
 .card__wrap--feedback {
-  @media (min-width: @tablet-width) {
-    display: flex;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card__wrap--inner {
@@ -107,13 +108,7 @@
 
 .card__text--view {
   display: block;
-  padding-bottom: 23px;
   font-weight: 700;
   line-height: 1;
-  align-self: flex-end;
-
-  @media (min-width: @tablet-width) {
-    padding: 0;
-    align-self: center;
-  }
+  align-self: center;
 }
