@@ -14,6 +14,12 @@
   @media (min-width: @tablet-width) {
     width: 50%;
     border-top: 0;
+    padding: 0;
+    margin-bottom: 48px;
+
+    &:first-child {
+      border-right: 1px solid #dbdbdb;
+    }
   }
 }
 
@@ -46,8 +52,11 @@
   flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
-    flex-direction: column;
-    align-items: flex-start;
+
+    &:nth-child(n+1) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }
 
