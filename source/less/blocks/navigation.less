@@ -1,10 +1,14 @@
 .navigation {
-  position: relative;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
-    width: 100%;
-    height: 100%;
-    position: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -12,25 +16,22 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 5;
 
   @media (min-width: @tablet-width) {
-    position: inherit;
     display: flex;
-    width: auto;
+    justify-content: space-around;
     color: #000000;
     box-shadow: none;
     font-size: 14px;
     line-height: 1.5;
     background: none;
   }
+   @media (min-width: @desktop-width) {
+     width: 40%;
+   }
 }
 
-.navigation__list--hidden {
+.navigation--hidden {
   display: none;
 
   @media (min-width: @tablet-width) {
@@ -65,11 +66,5 @@
     font-size: 14px;
     line-height: 1.5;
     background: none;
-  }
-}
-
-.navigation__item--margin {
-  @media (min-width: @tablet-width) {
-    margin-right: 180px;
   }
 }

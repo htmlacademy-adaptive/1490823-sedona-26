@@ -23,15 +23,16 @@
 
         <!--  Javascript, при нажатии на кнопку "крестик", добавляет класс "navigation__list--hidden"  в тег "nav" и убирает класс "header__button--toggle" в теге "button"   -->
 
-
-        <nav class="header__navigation navigation">
-          <ul class="navigation__list navigation__list--hidden">
+        <nav class="header__navigation navigation navigation--hidden">
+          <ul class="navigation__list">
             <li class="navigation__item">
               <a href="index.html" class="navigation__link">Главная</a>
             </li>
-            <li class="navigation__item navigation__item--margin">
+            <li class="navigation__item">
               <a href="catalog.html" class="navigation__link">Фото и видео</a>
             </li>
+          </ul>
+          <ul class="navigation__list">
             <li class="navigation__item">
               <a href="#" class="navigation__link">Форма отзыва</a>
             </li>

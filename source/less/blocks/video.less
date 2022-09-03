@@ -1,11 +1,18 @@
 .video {
+  width: 280px;
+  margin: 0 auto;
   text-align: center;
   padding-top: 17px;
   border-top: 1px solid #e5e5e5;
 
   @media (min-width: @tablet-width) {
+    width: 648px;
     border: 0;
     padding-top: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
   }
 }
 
@@ -15,6 +22,11 @@
   font-weight: 700;
   line-height: 1.44;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 450px;
+    margin: 0 auto 26px;
+  }
 }
 
 .video__text {
@@ -27,8 +39,8 @@
   color: #333333;
 
   @media (min-width: @tablet-width) {
-    margin: 0 0 60px 0;
-    padding: 0 160px;
+    width: 450px;
+    margin: 0 auto 60px;
   }
 }
 
