@@ -29,6 +29,7 @@
     align-self: center;
   }
 }
+
 .fieldset__list {
   width: 100%;
   list-style-type: none;
@@ -41,10 +42,14 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+
+  @media (min-width: @desktop-width) {
+    flex-wrap: nowrap;
+  }
 }
 
 .fieldset__title {
-  margin: 0;
+  margin: 0 0 28px;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.44;
@@ -58,8 +63,6 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-
-
 }
 
 .fieldset__item--position {
@@ -69,9 +72,21 @@
   }
 }
 
-.fieldset__item--width{
+.fieldset__item--width {
   @media (min-width: @tablet-width) {
     width: 50%;
+  }
+}
+
+.fieldset--scale {
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    padding: 28px 0 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+    padding: 28px 96px 48px;
   }
 }
 
@@ -88,6 +103,7 @@
 }
 
 .fieldset__input {
+  font-family: inherit;
   display: block;
   width: 100%;
   margin: 0;
@@ -108,21 +124,30 @@
 }
 
 .fieldset__textarea {
+  font-family: inherit;
   display: block;
   width: 100%;
-  margin: 20px auto;
-  min-height: 150px;
+  margin: 28px auto 0;
+  padding: 0;
+  min-height: 160px;
   border: 0;
   outline: none;
   outline-offset: 0;
   background: #f2f2f2;
 }
 
-.fieldset__wrap{
+.form__wrap {
   @media (min-width: @tablet-width) {
-    width: 100%;
+    width: 648px;
+    margin-bottom: 64px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+    margin-bottom: 64px;
+    padding: 0 96px;
   }
 }

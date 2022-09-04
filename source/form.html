@@ -15,13 +15,13 @@
           <img src="img/sedona-logo.svg" width="185" height="96" alt="Логотип Седона" class="header-logo__img">
         </a>
 
-        <!--  Javascript, при нажатии на кнопку "бургер-меню", добавляет класс header__button--toggle в тег "button" и убирает класс "navigation__list--hidden"в теге "ul" -->
+        <!--  Javascript, при нажатии на кнопку "бургер-меню", добавляет класс header__button--toggle в тег "button" и убирает класс "navigation--hidden"в теге "nav" -->
 
         <button class="burger-button" type="button">
           <span class="visually-hidden">Выпадающее меню.</span>
         </button>
 
-        <!--  Javascript, при нажатии на кнопку "крестик", добавляет класс "navigation__list--hidden"  в тег "nav" и убирает класс "header__button--toggle" в теге "button"   -->
+        <!--  Javascript, при нажатии на кнопку "крестик", добавляет класс "navigation--hidden"  в тег "nav" и убирает класс "header__button--toggle" в теге "button"   -->
 
         <nav class="header__navigation navigation navigation--hidden">
           <ul class="navigation__list">
@@ -134,12 +134,12 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form__fieldset fieldset fieldset--position">
+            <fieldset class="form__fieldset fieldset fieldset--scale">
               <label class="fieldset__title" for="emotion">Опишите свои эмоции:</label>
               <textarea name="emotion" class="fieldset__textarea" placeholder="Опишите подробно все свои восторги" id="emotion">
               </textarea>
             </fieldset>
-            <div class="fieldset__wrap">
+            <div class="form__wrap">
               <button class="button form__button" type="submit">
                 Отправить отзыв
               </button>
