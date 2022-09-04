@@ -15,22 +15,24 @@
           <img src="img/sedona-logo.svg" width="185" height="96" alt="Логотип Седона" class="header-logo__img">
         </a>
 
-          <!--  Javascript, при нажатии на кнопку "бургер-меню", добавляет класс burger-button__toggle в тег "burger-button" и убирает класс "navigation__list--hidden"в теге "ul" -->
+        <!--  Javascript, при нажатии на кнопку "бургер-меню", добавляет класс header__button--toggle в тег "button" и убирает класс "navigation--hidden"в теге "nav" -->
 
         <button class="burger-button" type="button">
           <span class="visually-hidden">Выпадающее меню.</span>
         </button>
 
-          <!--  Javascript, при нажатии на кнопку "крестик", добавляет класс "navigation__list--hidden"  в тег "ul" и убирает класс "burger-button__toggle" в теге "burger-button"   -->
+        <!--  Javascript, при нажатии на кнопку "крестик", добавляет класс "navigation--hidden"  в тег "nav" и убирает класс "header__button--toggle" в теге "button"   -->
 
-        <nav class="header__navigation navigation">
-          <ul class="navigation__list navigation__list--hidden">
+        <nav class="header__navigation navigation navigation--hidden">
+          <ul class="navigation__list">
             <li class="navigation__item">
               <a href="#" class="navigation__link">Главная</a>
             </li>
-            <li class="navigation__item navigation__item--margin">
+            <li class="navigation__item">
               <a href="catalog.html" class="navigation__link">Фото и видео</a>
             </li>
+          </ul>
+          <ul class="navigation__list">
             <li class="navigation__item">
               <a href="form.html" class="navigation__link">Форма отзыва</a>
             </li>
@@ -60,11 +62,14 @@
           <h2 class="visually-hidden">Причины для поездки в Седону.</h2>
           <ol class="reasons__list">
             <li class="reasons__item">
-              <h3 class="reasons__title">Настоящий городок</h3>
-              <p class="reasons__text">
-                Седона не аттракцион для туристов,
-                там течёт своя жизнь
-              </p>
+              <div class="reasons__wrap">
+                <h3 class="reasons__title">Настоящий городок</h3>
+                <p class="reasons__text">
+                  Седона не аттракцион для
+                  туристов, там течёт своя
+                  жизнь
+                </p>
+              </div>
               <img src="img/sedona-tablet.jpg" width="512" height="256" alt="Фото Седоны" class="reasons__img">
               <ul class="reasons__sub-list reasons-inner">
                 <li class="reasons-inner__item">
@@ -74,8 +79,8 @@
                   </h4>
                   <p class="reasons-inner__text">
                     Рекомендуем пожить в
-                    настоящем мотеле, все как в
-                    кино!
+                    настоящем мотеле, все
+                    как в кино!
                   </p>
                 </li>
                 <li class="reasons-inner__item">
@@ -84,7 +89,8 @@
                     Еда
                   </h4>
                   <p class="reasons-inner__text">
-                    Всегда заказывайте фирменный бургер,
+                    Всегда заказывайте
+                    фирменный бургер,
                     Вы не разочаруетесь!
                   </p>
                 </li>
@@ -94,23 +100,24 @@
                     Сувениры
                   </h4>
                   <p class="reasons-inner__text">
-                    Не только китайского, но и
-                    местного производства!
+                    Не только китайского, но
+                    и местного производства!
                   </p>
                 </li>
               </ul>
             </li>
-            <li class="reasons__item">
-              <h3 class="reasons__title">
-                Там есть мост дъявола
-              </h3>
-              <p class="reasons__text">
-                Да, по нему можно пройти! Если вы
-                осмелитесь, конечно
-              </p>
-              <picture>
-                <img src="img/devil-bridge.jpg" width="280" height="280" alt="Мост дъявола" class="reasons__img">
-              </picture>
+            <li class="reasons__item reasons__item--order">
+              <div class="reasons__wrap">
+                <h3 class="reasons__title">
+                  Там есть мост дъявола
+                </h3>
+                <p class="reasons__text">
+                  Да, по нему можно
+                  пройти! Если вы
+                  осмелитесь, конечно
+                </p>
+              </div>
+              <img src="img/photo-bridge@1x.jpg" width="512" height="256" alt="Мост дъявола" class="reasons__img reasons__img--order">
             </li>
             <li class="reasons__item reasons__item--view">
               <h3 class="reasons__title reasons__title--view">
@@ -126,8 +133,9 @@
                 Красивая дорога
               </h3>
               <p class="reasons__text reasons__text--view">
-                Ехать в Седону из Лас-Вегаса
-                совсем не скучно!
+                Ехать в Седону из
+                Лас-Вегаса совсем
+                не скучно!
               </p>
             </li>
             <li class="reasons__item reasons__item--view">
@@ -135,8 +143,9 @@
                 Мало туристов
               </h3>
               <p class="reasons__text reasons__text--view">
-                Большинство едет в Гранд Каньон
-                и толпится там
+                Большинство едет
+                в Гранд Каньон и
+                толпится там
               </p>
             </li>
           </ol>
@@ -150,7 +159,7 @@
             поездки, и мы покажем вам лучшие
             предложения гостиниц в Седоне
           </p>
-          <a href="form.html" class="search__link button">
+          <a href="form.html" class="search__link">
             Найти гостиницу
           </a>
         </section>

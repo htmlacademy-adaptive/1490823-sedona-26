@@ -15,22 +15,24 @@
           <img src="img/sedona-logo.svg" width="185" height="96" alt="Логотип Седона" class="header-logo__img">
         </a>
 
-        <!--  Javascript, при нажатии на кнопку "бургер-меню", добавляет класс header__button--toggle в тег "button" и убирает класс "navigation__list--hidden"в теге "ul" -->
+        <!--  Javascript, при нажатии на кнопку "бургер-меню", добавляет класс header__button--toggle в тег "button" и убирает класс "navigation--hidden"в теге "nav" -->
 
         <button class="burger-button" type="button">
           <span class="visually-hidden">Выпадающее меню.</span>
         </button>
 
-        <!--  Javascript, при нажатии на кнопку "крестик", добавляет класс "navigation__list--hidden"  в тег "nav" и убирает класс "header__button--toggle" в теге "button"   -->
+        <!--  Javascript, при нажатии на кнопку "крестик", добавляет класс "navigation--hidden"  в тег "nav" и убирает класс "header__button--toggle" в теге "button"   -->
 
-        <nav class="header__navigation navigation">
-          <ul class="navigation__list navigation__list--hidden">
+        <nav class="header__navigation navigation navigation--hidden">
+          <ul class="navigation__list">
             <li class="navigation__item">
               <a href="index.html" class="navigation__link">Главная</a>
             </li>
-            <li class="navigation__item navigation__item--margin">
+            <li class="navigation__item">
               <a href="#" class="navigation__link">Фото и видео</a>
             </li>
+          </ul>
+          <ul class="navigation__list">
             <li class="navigation__item">
               <a href="form.html" class="navigation__link">Форма отзыва</a>
             </li>
@@ -58,27 +60,31 @@
         <section class="catalog">
           <h2 class="visually-hidden">Каталог карточек.</h2>
           <ul class="catalog__list">
-            <li class="catalog__item card">
+            <li class="catalog__item card catalog__item--position">
               <figure class="card__block">
-                <a href="#" class="card__link">
-                <img src="img/arizona.jpg" alt="Неродные прсторы" class="card__img">
+                <a href="#" class="card__link card__link--position">
+                  <img src="img/arizona.jpg" width=648 height=400 alt="Неродные прсторы" class="card__img">
                 </a>
                 <figcaption class="card__name">
-                  <a href="#" class="card__title">
-                    Неродные просторы
-                  </a>
                   <div class="card__wrap">
-                    <p class="card__text">Автор фото:</p>
-                    <p class="card__author">Борис</p>
+                    <a href="#" class="card__title">
+                      Неродные просторы
+                    </a>
+                    <div class="card__wrap-inner">
+                      <p class="card__text">Автор фото:&#160;</p>
+                      <p class="card__author">Борис</p>
+                    </div>
                   </div>
-                  <button class="card__button">
-                    <span class="visually-hidden">Поставить отметку "Нравится".</span>
-                    <img src="img/like-icon.svg"
-                      width=23 height=21 alt="Иконка Нравится."
-                      class="card__img">
-                  </button>
-                  <span class="visually-hidden">Количество отметок "Нравится":</span>
-                  <span class="card__text card__text--view">1350</span>
+                  <div class="card__wrap-feedback">
+                    <button class="card__button">
+                      <span class="visually-hidden">Поставить отметку "Нравится".</span>
+                      <img src="img/like-icon.svg"
+                        width=23 height=21 alt="Иконка Нравится."
+                        class="card__img">
+                    </button>
+                    <span class="visually-hidden">Количество отметок "Нравится":</span>
+                    <span class="card__text card__text--view">1350</span>
+                  </div>
                 </figcaption>
               </figure>
             </li>
@@ -88,21 +94,25 @@
                   <img src="img/cactus.jpg" width="280" height="280" alt="Местная растительность" class="card__img">
                 </a>
                 <figcaption class="card__name">
-                  <a href="#" class="card__title">
-                    Местная растительность
-                  </a>
                   <div class="card__wrap">
-                    <p class="card__text">Автор фото:</p>
-                    <p class="card__author">Сергей</p>
+                    <a href="#" class="card__title">
+                      Местная растительность
+                    </a>
+                    <div class="card__wrap-inner">
+                      <p class="card__text">Автор фото:&#160;</p>
+                      <p class="card__author">Сергей</p>
+                    </div>
                   </div>
-                  <button class="card__button">
-                    <span class="visually-hidden">Поставить отметку "Нравится".</span>
-                    <svg class=card__img width="23" height="21" viewBox="0 0 23 21" fill="none"   xmlns="http://www.w3.org/2000/svg">
-                      <path opacity="0.3" d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="black"/>
-                    </svg>
-                  </button>
-                  <span class="visually-hidden">Количество отметок "Нравится":</span>
-                  <span class="card__text card__text--view">143</span>
+                  <div class="card__wrap-feedback">
+                    <button class="card__button">
+                      <span class="visually-hidden">Поставить отметку "Нравится".</span>
+                      <svg class=card__img width="23" height="21" viewBox="0 0 23 21" fill="none"   xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.3" d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="black"/>
+                      </svg>
+                    </button>
+                    <span class="visually-hidden">Количество отметок "Нравится":</span>
+                    <span class="card__text card__text--view">143</span>
+                  </div>
                 </figcaption>
               </figure>
             </li>
@@ -112,45 +122,53 @@
                   <img src="img/nordic-road.jpg"  width="280" height="280" alt="Дорога на север" class="card__img">
                 </a>
                 <figcaption class="card__name">
-                  <a href="#" class="card__title">
-                    Дорога на север
-                  </a>
                   <div class="card__wrap">
-                    <p class="card__text">Автор фото:</p>
-                    <p class="card__author">Пётр</p>
+                    <a href="#" class="card__title">
+                      Дорога на север
+                    </a>
+                    <div class="card__wrap-inner">
+                      <p class="card__text">Автор фото:&#160;</p>
+                      <p class="card__author">Пётр</p>
+                    </div>
                   </div>
-                  <button class="card__button">
-                  <span class="visually-hidden">Поставить отметку "Нравится".</span>
-                    <svg class=card__img width="23" height="21" viewBox="0 0 23 21" fill="none"   xmlns="http://www.w3.org/2000/svg">
-                      <path opacity="0.3" d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="black"/>
-                    </svg>
-                  </button>
-                  <span class="visually-hidden">Количество отметок "Нравится":</span>
-                  <span class="card__text card__text--view">96</span>
+                  <div class="card__wrap-feedback">
+                    <button class="card__button">
+                    <span class="visually-hidden">Поставить отметку "Нравится".</span>
+                      <svg class=card__img width="23" height="21" viewBox="0 0 23 21" fill="none"   xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.3" d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="black"/>
+                      </svg>
+                    </button>
+                    <span class="visually-hidden">Количество отметок "Нравится":</span>
+                    <span class="card__text card__text--view">96</span>
+                  </div>
                 </figcaption>
               </figure>
             </li>
             <li class="catalog__item card">
               <figure class="card__block">
                 <a href="#" class="card__link">
-                  <img src="img/devil-bridge.jpg"  width="280" height="280" alt="Мост дъявола" class="card__img">
+                  <img src="img/devil-bridge.jpg" width="280" height="280" alt="Мост дъявола" class="card__img">
                 </a>
                 <figcaption class="card__name">
-                  <a href="#" class="card__title">
-                    Мост дъявола
-                  </a>
                   <div class="card__wrap">
-                    <p class="card__text">Автор фото:</p>
-                    <p class="card__author">Антон</p>
+                    <a href="#" class="card__title">
+                      Мост дъявола
+                    </a>
+                    <div class="card__wrap-inner">
+                      <p class="card__text">Автор фото:&#160;</p>
+                      <p class="card__author">Антон</p>
+                    </div>
                   </div>
-                  <button class="card__button">
-                  <span class="visually-hidden">Поставить отметку "Нравится".</span>
-                    <svg class=card__img width="23" height="21" viewBox="0 0 23 21" fill="none"   xmlns="http://www.w3.org/2000/svg">
-                      <path opacity="0.3" d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="black"/>
-                    </svg>
-                  </button>
-                  <span class="visually-hidden">Количество отметок "Нравится":</span>
-                  <span class="card__text card__text--view">254</span>
+                  <div class="card__wrap-feedback">
+                    <button class="card__button">
+                    <span class="visually-hidden">Поставить отметку "Нравится".</span>
+                      <svg class=card__img width="23" height="21" viewBox="0 0 23 21" fill="none"   xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.3" d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="black"/>
+                      </svg>
+                    </button>
+                    <span class="visually-hidden">Количество отметок "Нравится":</span>
+                    <span class="card__text card__text--view">254</span>
+                  </div>
                 </figcaption>
               </figure>
             </li>
