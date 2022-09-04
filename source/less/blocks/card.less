@@ -2,6 +2,16 @@
   width: 100%;
   padding-top: 25px;
   border-top: 1px solid #e5e5e5;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    border: 0;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 33.33%;
+  }
 }
 
 .card__block {
@@ -9,23 +19,58 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    align-items: flex-start;
+    width: 100%;
+  }
 }
 
 .card__link {
   display: block;
+  width: 100%;
 }
+
+.card__link-position {
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
+}
+
 
 .card__img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 .card__name {
-  padding-top: 15px;
-  width: 280px;
+  width: 100%;
+  padding: 15px 0 25px;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 21px 20px 15px;
+    background: #e5e5e5;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background: #000000;
+    opacity: 0.3;
+  }
 }
 
 .card__title {
@@ -38,9 +83,19 @@
   font-weight: 700;
   line-height: 1.5;
   color: #000000;
+
+  @media (min-width: @desktop-width) {
+    color: #ffffff;
+  }
 }
 
-.card__wrap {
+.card__wrap-feedback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__wrap-inner {
   width: 100%;
   display: flex;
 }
@@ -52,6 +107,10 @@
   font-weight: 400;
   color: #333333;
   line-height: 1.5;
+
+  @media (min-width: @desktop-width) {
+    color: #ffffff;
+  }
 }
 
 .card__author {
@@ -61,19 +120,27 @@
   font-weight: 400;
   color: #333333;
   line-height: 1.5;
+
+  @media (min-width: @desktop-width) {
+    color: #ffffff;
+  }
 }
 
 .card__button {
   display: block;
-  padding: 11px 14px 25px 0;
+  padding: 11px 14px 11px 0;
   cursor: pointer;
   background: none;
   border: 0;
 }
 
 .card__text--view {
-  padding-bottom: 23px;
+  display: block;
   font-weight: 700;
   line-height: 1;
-  align-self: flex-end;
+  align-self: center;
+
+  @media (min-width: @desktop-width) {
+    color: #ffffff;
+  }
 }

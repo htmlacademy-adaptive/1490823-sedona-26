@@ -1,14 +1,24 @@
 .form {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 60px;
+    justify-content: center;
+  }
 }
 
 .form__button {
-  padding: 18px 33px 15px 33px;
+  min-width: 280px;
+  padding: 16px 33px 16px 33px;
 }
 
 .form__info {
   margin: 0;
-  padding-right: 33px;
+  width: 100%;
+  padding: 3px 14px 0 0;
   text-align: right;
   text-transform: uppercase;
   font-weight: 400;

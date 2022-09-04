@@ -1,6 +1,11 @@
 .search {
   padding: 38px 10px 49px 10px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 460px;
+    margin: 0 auto;
+  }
 }
 
 .search__title {
@@ -24,4 +29,13 @@
   text-decoration: none;
   margin: 0 auto;
   padding: 16px 50px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.44;
+  background: #81b3d2;
+  color: #ffffff;
 }

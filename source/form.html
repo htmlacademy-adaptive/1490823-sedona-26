@@ -15,23 +15,24 @@
           <img src="img/sedona-logo.svg" width="185" height="96" alt="Логотип Седона" class="header-logo__img">
         </a>
 
-        <!--  Javascript, при нажатии на кнопку "бургер-меню", добавляет класс header__button--toggle в тег "button" и убирает класс "navigation__list--hidden"в теге "ul" -->
+        <!--  Javascript, при нажатии на кнопку "бургер-меню", добавляет класс header__button--toggle в тег "button" и убирает класс "navigation--hidden"в теге "nav" -->
 
         <button class="burger-button" type="button">
           <span class="visually-hidden">Выпадающее меню.</span>
         </button>
 
-        <!--  Javascript, при нажатии на кнопку "крестик", добавляет класс "navigation__list--hidden"  в тег "nav" и убирает класс "header__button--toggle" в теге "button"   -->
+        <!--  Javascript, при нажатии на кнопку "крестик", добавляет класс "navigation--hidden"  в тег "nav" и убирает класс "header__button--toggle" в теге "button"   -->
 
-
-        <nav class="header__navigation navigation">
-          <ul class="navigation__list navigation__list--hidden">
+        <nav class="header__navigation navigation navigation--hidden">
+          <ul class="navigation__list">
             <li class="navigation__item">
               <a href="index.html" class="navigation__link">Главная</a>
             </li>
-            <li class="navigation__item navigation__item--margin">
+            <li class="navigation__item">
               <a href="catalog.html" class="navigation__link">Фото и видео</a>
             </li>
+          </ul>
+          <ul class="navigation__list">
             <li class="navigation__item">
               <a href="#" class="navigation__link">Форма отзыва</a>
             </li>
@@ -65,16 +66,16 @@
             <fieldset class="form__fieldset fieldset">
               <h4 class="fieldset__title">Представьтесь:</h4>
               <ul class="fieldset__list">
-                <li class="fieldset__item">
+                <li class="fieldset__item fieldset__item--position">
                   <label class="fieldset__label" for="client-firstname">
                     Имя*:</label>
                   <input type="text" placeholder="Пётр" required name="client-firstname" class="fieldset__input fieldset__input--view" id="client-firstname">
                 </li>
-                <li class="fieldset__item">
+                <li class="fieldset__item fieldset__item--position">
                   <label class="fieldset__label" for="client-lastname">Фамилия*:</label>
                   <input type="text" placeholder="Пустота" required name="client-lastname" class="fieldset__input fieldset__input--view" id="client-lastname">
                 </li>
-                <li class="fieldset__item">
+                <li class="fieldset__item fieldset__item--position">
                   <label class="fieldset__label" for="client-middle-name">Отчество:</label>
                   <input type="text" placeholder="Викторович" name="client-middle-name" class="fieldset__input fieldset__input--view" id="client-middle-name">
                 </li>
@@ -83,61 +84,67 @@
             <fieldset class="form__fieldset fieldset">
               <h4 class="fieldset__title">Контактная информация:</h4>
               <ul class="fieldset__list">
-                <li class="fieldset__item">
+                <li class="fieldset__item fieldset__item--position">
                   <label class="fieldset__label" for="client-phone">Контактный телефон*:</label>
                   <input type="tel" placeholder="Введите телефон" required name="client-phone" class="fieldset__input fieldset__input--view" id="client-phone">
                 </li>
-                <li class="fieldset__item">
+                <li class="fieldset__item fieldset__item--position">
                   <label class="fieldset__label" for="client-email">Электронная почта*:</label>
                   <input type="email" placeholder="Введите email" required name="client-email" class="fieldset__input fieldset__input--view" id="client-email">
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form__fieldset fieldset">
+            <fieldset class="form__fieldset fieldset fieldset--position">
               <h4 class="fieldset__title">Ваше общее впечатление:</h4>
-              <ul class="fieldset__list">
-                <li class="fieldset__item">
+              <ul class="fieldset__list fieldset__list--position">
+                <li class="fieldset__item fieldset__item--width">
                   <input type="radio" checked name="impression" class="fieldset__radio fieldset__radio--view" id="impression-good">
                   <label class="fieldset__label" for="impression-good">Скорее положительное</label>
                 </li>
-                <li class="fieldset__item">
+                <li class="fieldset__item fieldset__item--width">
                   <input type="radio" name="impression" class="fieldset__radio fieldset__radio--view" id="impression-bad">
                   <label class="fieldset__label" for="impression-bad">Скорее отрицательное</label>
                 </li>
-                <li class="fieldset__item">
+                <li class="fieldset__item fieldset__item--width">
                   <input type="radio" name="impression" class="fieldset__radio fieldset__radio--view" id="impression-unknown">
                   <label class="fieldset__label" for="impression-unknown">Затрудняюсь ответить</label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form__fieldset fieldset">
+            <fieldset class="form__fieldset fieldset fieldset--position">
               <h4 class="fieldset__title">Посещённые достопримечательности:</h4>
-              <ul class="fieldset__list">
-                <li class="fieldset__item">
+              <ul class="fieldset__list fieldset__list--position">
+                <li class="fieldset__item fieldset__item--width">
                   <input type="checkbox" checked name="devil-bridge" class="fieldset__checkbox fieldset__checkbox--view" id="devil-bridge">
                   <label class="fieldset__label" for="devil-bridge">Мост Дъявола</label>
                 </li>
-                <li class="fieldset__item">
+                <li class="fieldset__item fieldset__item--width">
                   <input type="checkbox" checked name="bell-rock" class="fieldset__checkbox fieldset__checkbox--view" id="bell-rock">
                   <label class="fieldset__label" for="bell-rock">Гора-Колокол</label>
                 </li>
-                <li class="fieldset__item">
+                <li class="fieldset__item fieldset__item--width">
                   <input type="checkbox" checked name="slide-park" class="fieldset__checkbox fieldset__checkbox--view" id="slide-park">
                   <label class="fieldset__label" for="slide-park">Слайд-парк</label>
                 </li>
-                <li class="fieldset__item">
+                <li class="fieldset__item fieldset__item--width">
                   <input type="checkbox" name="red-rocks" class="fieldset__checkbox fieldset__checkbox--view" id="red-rocks">
-                  <label class="fieldset__label" for="red-rocks">Красные скалы</label>
+                  <label class="fieldset__label" for="red-rocks">
+                    Красные скалы
+                  </label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form__fieldset fieldset">
+            <fieldset class="form__fieldset fieldset fieldset--scale">
               <label class="fieldset__title" for="emotion">Опишите свои эмоции:</label>
               <textarea name="emotion" class="fieldset__textarea" placeholder="Опишите подробно все свои восторги" id="emotion">
               </textarea>
             </fieldset>
-            <button class="button form__button" type="submit">Отправить отзыв</button>
-            <p class="form__info">* -обязательные поля</p>
+            <div class="form__wrap">
+              <button class="button form__button" type="submit">
+                Отправить отзыв
+              </button>
+              <p class="form__info">* -обязательные поля</p>
+            </div>
           </form>
         </section>
       </main>

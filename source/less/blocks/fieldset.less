@@ -1,5 +1,5 @@
 .fieldset {
-  width: auto;
+  width: 100%;
   padding: 25px 0 40px 0;
   margin: 0;
   border: 0;
@@ -10,6 +10,24 @@
   text-transform: uppercase;
   position: relative;
   font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    border-top: 0;
+    padding: 0;
+    margin-bottom: 48px;
+
+    &:first-child {
+      border-right: 1px solid #dbdbdb;
+    }
+  }
+}
+
+.fieldset--position {
+  @media (min-width: @tablet-width) {
+    width: 85%;
+    align-self: center;
+  }
 }
 
 .fieldset__list {
@@ -19,8 +37,19 @@
   padding: 0;
 }
 
+.fieldset__list--position {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  @media (min-width: @desktop-width) {
+    flex-wrap: nowrap;
+  }
+}
+
 .fieldset__title {
-  margin: 0;
+  margin: 0 0 28px;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.44;
@@ -28,10 +57,37 @@
 }
 
 .fieldset__item {
+  width: 100%;
   text-align: left;
-  padding: 20px;
+  padding: 20px 0;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+}
+
+.fieldset__item--position {
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.fieldset__item--width {
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
+}
+
+.fieldset--scale {
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    padding: 28px 0 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+    padding: 28px 96px 48px;
+  }
 }
 
 .fieldset__label {
@@ -40,11 +96,16 @@
   font-weight: 400;
   line-height: 1.5;
   color: #333333;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 50px;
+  }
 }
 
 .fieldset__input {
+  font-family: inherit;
   display: block;
-  width: 87%;
+  width: 100%;
   margin: 0;
   border: 0;
   padding: 16px;
@@ -54,17 +115,39 @@
   line-height: 1.44;
   color: #000000;
   background: #f2f2f2;
-  text-align: left;
+  align-self: center;
+
+  @media (min-width: @tablet-width) {
+    width: 80%;
+    align-self: center;
+  }
 }
 
 .fieldset__textarea {
+  font-family: inherit;
   display: block;
-  margin: 0 auto;
-  width: 83%;
-  min-height: 150px;
-  padding: 16px;
+  width: 100%;
+  margin: 28px auto 0;
+  padding: 0;
+  min-height: 160px;
   border: 0;
   outline: none;
   outline-offset: 0;
   background: #f2f2f2;
+}
+
+.form__wrap {
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    margin-bottom: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+    margin-bottom: 64px;
+    padding: 0 96px;
+  }
 }
