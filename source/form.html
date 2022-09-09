@@ -15,13 +15,13 @@
           <img src="img/sedona-logo.svg" width="185" height="96" alt="Логотип Седона" class="header-logo__img">
         </a>
 
-        <!--  Javascript, при нажатии на кнопку "бургер-меню", добавляет класс header__button--toggle в тег "button" и убирает класс "navigation--hidden"в теге "nav" -->
+        <!--  Javascript, при нажатии на кнопку "бургер-меню", добавляет класс header__button--close в тег "button" и убирает класс "navigation--hidden"в теге "nav" -->
 
         <button class="burger-button" type="button">
           <span class="visually-hidden">Выпадающее меню.</span>
         </button>
 
-        <!--  Javascript, при нажатии на кнопку "крестик", добавляет класс "navigation--hidden"  в тег "nav" и убирает класс "header__button--toggle" в теге "button"   -->
+        <!--  Javascript, при нажатии на кнопку "крестик", добавляет класс "navigation--hidden"  в тег "nav" и убирает класс "header__button--close" в теге "button"   -->
 
         <nav class="header__navigation navigation navigation--hidden">
           <ul class="navigation__list">
@@ -77,7 +77,7 @@
                 </li>
                 <li class="fieldset__item fieldset__item--position">
                   <label class="fieldset__label" for="client-middle-name">Отчество:</label>
-                  <input type="text" placeholder="Викторович" name="client-middle-name" class="fieldset__input fieldset__input--view" id="client-middle-name">
+                  <input type="text" placeholder="Викторович" name="client-middle-name" class="fieldset__input " id="client-middle-name">
                 </li>
               </ul>
             </fieldset>
@@ -85,12 +85,18 @@
               <h4 class="fieldset__title">Контактная информация:</h4>
               <ul class="fieldset__list">
                 <li class="fieldset__item fieldset__item--position">
-                  <label class="fieldset__label" for="client-phone">Контактный телефон*:</label>
-                  <input type="tel" placeholder="Введите телефон" required name="client-phone" class="fieldset__input fieldset__input--view" id="client-phone">
+                  <label class="fieldset__label fieldset__label--icon" for="client-phone">
+                    <p class="fieldset__input--sign">Контактный телефон*:</p>
+                    <input type="tel" placeholder="Введите телефон" required name="client-phone" class="fieldset__input fieldset__input--width" id="client-phone">
+                    <img src="img/phone-icon.svg" width="58" height="58" alt="Иконка телефон" class="fieldset__icon field__icon--phone">
+                  </label>
                 </li>
                 <li class="fieldset__item fieldset__item--position">
-                  <label class="fieldset__label" for="client-email">Электронная почта*:</label>
-                  <input type="email" placeholder="Введите email" required name="client-email" class="fieldset__input fieldset__input--view" id="client-email">
+                  <label class="fieldset__label fieldset__label--icon" for="client-email">
+                  <p class="fieldset__input--sign">Контактный email*:</p>
+                  <input type="email" placeholder="Введите email" required name="client-email" class="fieldset__input fieldset__input--width" id="client-email">
+                  <img src="img/email-icon.svg" width="58" height="58" alt="Иконка email" class="fieldset__icon field__icon--email">
+                  </label>
                 </li>
               </ul>
             </fieldset>

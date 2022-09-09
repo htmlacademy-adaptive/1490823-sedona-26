@@ -102,6 +102,11 @@
   }
 }
 
+.fieldset__label--icon {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .fieldset__input {
   font-family: inherit;
   display: block;
@@ -116,11 +121,21 @@
   color: #000000;
   background: #f2f2f2;
   align-self: center;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     width: 80%;
-    align-self: center;
   }
+}
+
+.fieldset__input--sign {
+  margin: 0;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.fieldset__input--width {
+  width: 78%;
 }
 
 .fieldset__textarea {
