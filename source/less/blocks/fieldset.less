@@ -24,15 +24,10 @@
       padding-left: 43px;
     }
     &:nth-child(n+3) {
+      width: 100%;
       margin-top: 48px;
+      padding: 0 36px;
     }
-  }
-}
-
-.fieldset--position {
-  @media (min-width: @tablet-width) {
-    width: 85%;
-    align-self: center;
   }
 }
 
@@ -41,6 +36,13 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.fieldset__list--position {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .fieldset__title {
@@ -57,10 +59,6 @@
   display: grid;
   grid-template-columns: auto 58px;
   grid-template-rows: auto auto;
-}
-
-.fieldset__item--position {
-
 }
 
 .fieldset__label {
