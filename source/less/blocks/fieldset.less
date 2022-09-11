@@ -26,7 +26,6 @@
     &:nth-child(n+3) {
       width: 100%;
       margin-top: 48px;
-      padding: 0 36px;
     }
   }
 }
@@ -39,18 +38,58 @@
 }
 
 .fieldset__list--position {
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-wrap: nowrap;
+    justify-content: space-around;
   }
 }
 
 .fieldset__title {
-  margin: 0 0 28px;
+  width: 100%;
+  margin: 0 auto 28px;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.44;
   text-transform: uppercase;
+}
+
+.fieldset__title--decoration {
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: 40%;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 123px;
+      height: 1px;
+      position: absolute;
+      bottom: 50%;
+      left: -70%;
+      z-index: 1;
+      background: #dbdbdb;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 123px;
+      height: 1px;
+      position: absolute;
+      bottom: 50%;
+      right: -70%;
+      z-index: 1;
+      background: #dbdbdb;
+    }
+  }
 }
 
 .fieldset__item {
@@ -101,10 +140,26 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 
 .fieldset__label-impression {
   text-transform: initial;
+}
+
+.fieldset__radio {
+  margin-right: 20px;
+}
+
+.fieldset__checkbox {
+  margin-right: 20px;
 }
 
 .fieldset__textarea {
