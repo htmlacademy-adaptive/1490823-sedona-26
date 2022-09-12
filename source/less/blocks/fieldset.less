@@ -20,10 +20,12 @@
       border-right: 1px solid #dbdbdb;
       padding-right: 43px;
     }
-    &:nth-child(2) {
+
+    &:nth-child (2) {
       padding-left: 43px;
     }
-    &:nth-child(n+3) {
+
+    &:nth-child (n + 3) {
       width: 100%;
       margin-top: 48px;
     }
@@ -38,7 +40,6 @@
 }
 
 .fieldset__list--position {
-
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -61,7 +62,6 @@
 }
 
 .fieldset__title--decoration {
-
   @media (min-width: @tablet-width) {
     position: relative;
     width: 40%;
@@ -179,14 +179,14 @@
   opacity: 0;
 }
 
-.fieldset__radio+label {
+.fieldset__radio + label {
   display: flex;
   justify-content: center;
   align-items: center;
   user-select: none;
 }
 
-.fieldset__radio+label::before {
+.fieldset__radio + label::before {
   content: "";
   display: block;
   margin-right: 16px;
@@ -196,16 +196,19 @@
   background: #f2f2f2;
   cursor: pointer;
 }
-.fieldset__radio:not(:disabled):not(:checked)+label:hover::before {
+
+.fieldset__radio:not(:disabled):not(:checked) + label:hover::before {
   background: #e2e2e2;
 }
-.fieldset__radio:not(:disabled):active+label::before {
+
+.fieldset__radio:not(:disabled):active + label::before {
   background-color: #e5e5e5;
   background-image: url("../../img/radio-dot.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
-.fieldset__radio:checked+label::before {
+
+.fieldset__radio:checked + label::before {
   background-color: #d2d2d2;
   background-image: url("../../img/radio-dot.svg");
   background-repeat: no-repeat;
@@ -218,14 +221,14 @@
   opacity: 0;
 }
 
-.fieldset__checkbox+label {
+.fieldset__checkbox + label {
   display: flex;
   justify-content: center;
   align-items: center;
   user-select: none;
 }
 
-.fieldset__checkbox+label::before {
+.fieldset__checkbox + label::before {
   content: "";
   display: block;
   margin-right: 16px;
@@ -236,16 +239,18 @@
   cursor: pointer;
 }
 
-.fieldset__checkbox:not(:disabled):not(:checked)+label:hover::before {
+.fieldset__checkbox:not(:disabled):not(:checked) + label:hover::before {
   background: #e2e2e2;
 }
-.fieldset__checkbox:not(:disabled):active+label::before {
+
+.fieldset__checkbox:not(:disabled):active + label::before {
   background-color: #e5e5e5;
   background-image: url("../../img/tick.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
-.fieldset__checkbox:checked+label::before {
+
+.fieldset__checkbox:checked + label::before {
   background-color: #d2d2d2;
   background-image: url("../../img/tick.svg");
   background-repeat: no-repeat;

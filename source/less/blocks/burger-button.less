@@ -6,23 +6,51 @@
   z-index: 1;
   width: 56px;
   height: 57px;
-  background: url("../../img/burger-button.svg") center no-repeat;
   cursor: pointer;
   padding: 0;
   border: none;
+  background: none;
+  fill: #81b3d2;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     display: none;
   }
 }
 
-.burger-button__close {
+.close-button {
+  display: block;
+  border: 0;
+  background: 0;
   position: absolute;
   top: 0;
   right: 0;
   z-index: 4;
   width: 56px;
   height: 56px;
-  background: url("../../img/icon-cross.svg") center no-repeat;
   cursor: pointer;
+  fill: #ffffff;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.button-hidden {
+  display: none;
 }
