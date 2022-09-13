@@ -1,16 +1,17 @@
-.burger-button {
+.button-toggle {
   display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 56px;
-  height: 57px;
   cursor: pointer;
-  padding: 0;
+  padding: 16px;
   border: none;
   background: none;
-  fill: #81b3d2;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 24px;
+    background: url("../../img/burger-button.svg") center no-repeat;
+  }
 
   &:hover {
     opacity: 0.6;
@@ -25,32 +26,18 @@
   }
 }
 
-.close-button {
-  display: block;
-  border: 0;
-  background: 0;
+.button-toggle--close {
   position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 4;
-  width: 56px;
-  height: 56px;
-  cursor: pointer;
-  fill: #ffffff;
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
+  z-index: 3;
+  &::after {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 24px;
+    background: url("../../img/icon-cross.svg") center no-repeat;
   }
 
   @media (min-width: @tablet-width) {
     display: none;
   }
-}
-
-.button-hidden {
-  display: none;
 }
