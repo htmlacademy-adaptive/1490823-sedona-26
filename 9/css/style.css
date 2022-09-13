@@ -12,57 +12,46 @@
   font-display: swap;
   src: url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
 }
-.burger-button {
+.button-toggle {
   display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 56px;
-  height: 57px;
   cursor: pointer;
-  padding: 0;
+  padding: 16px;
   border: none;
   background: none;
-  fill: #81b3d2;
 }
-.burger-button:hover {
-  opacity: 0.6;
-}
-.burger-button:active {
-  opacity: 0.3;
-}
-@media (min-width: 768px) {
-  .burger-button {
-    display: none;
-  }
-}
-.close-button {
+.button-toggle::after {
+  content: "";
   display: block;
-  border: 0;
-  background: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 4;
-  width: 56px;
-  height: 56px;
-  cursor: pointer;
-  fill: #ffffff;
+  width: 23px;
+  height: 24px;
+  background: url("../../img/burger-button.svg") center no-repeat;
 }
-.close-button:hover {
+.button-toggle:hover {
   opacity: 0.6;
 }
-.close-button:active {
+.button-toggle:active {
   opacity: 0.3;
 }
 @media (min-width: 768px) {
-  .close-button {
+  .button-toggle {
     display: none;
   }
 }
-.button-hidden {
-  display: none;
+.button-toggle--close {
+  position: absolute;
+  z-index: 3;
+}
+.button-toggle--close::after {
+  content: "";
+  display: block;
+  width: 23px;
+  height: 24px;
+  background: url("../../img/icon-cross.svg") center no-repeat;
+}
+@media (min-width: 768px) {
+  .button-toggle--close {
+    display: none;
+  }
 }
 .button {
   display: block;
@@ -646,6 +635,8 @@
   width: 100%;
   height: 56px;
   position: relative;
+  display: flex;
+  justify-content: flex-end;
 }
 .header-logo {
   width: 185px;
