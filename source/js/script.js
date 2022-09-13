@@ -7,5 +7,5 @@ buttonToggle.onclick = showMobileMenu;
 
 function showMobileMenu() {
     buttonToggle.classList.toggle("button-toggle--close");
-    navigation.classList.toggle("navigation-hidden");
+    navigation.classList.toggle("navigation--hidden");
 }
