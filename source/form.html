@@ -14,10 +14,7 @@
         <a href="index.html" class="header-logo">
           <img src="img/sedona-logo.svg" width="185" height="96" alt="Логотип Седона" class="header-logo__img">
         </a>
-
-        <!--  Javascript, при нажатии на кнопку "бургер-меню", добавляет класс button-hidden к классу "burger-button" и убирает класс burger-hidden у класса "close-button" и убирает класс "navigation--hidden"в теге "nav" -->
-
-        <button class="burger-button" type="button">
+        <button class="burger-button" type="button" id="burger-button">
           <span class="visually-hidden">Выпадающее меню.</span>
           <svg width="23" height="22" viewBox="0 0 23 22"
             xmlns="http://www.w3.org/2000/svg">
@@ -26,26 +23,24 @@
             <path d="M22.9 18H0V22H22.9V18Z" fill="#81B3D2"/>
           </svg>
         </button>
-        <button class="close-button button-hidden" type="button">
+        <button class="close-button button-hidden" type="button" id="close-button">
           <svg width="23" height="23" viewBox="0 0 23 23"
             xmlns="http://www.w3.org/2000/svg">
             <path d="M22.2 2.8L19.4 0L11.1 8.3L2.8 0L0 2.8L8.3 11.1L0 19.4L2.8 22.2L11.1 13.9L19.4 22.2L22.2 19.4L13.9 11.1L22.2 2.8Z"/>
           </svg>
         </button>
-        <nav class="header__navigation navigation navigation--hidden">
+        <nav class="header__navigation navigation navigation--hidden" id="navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
               <a href="index.html" class="navigation__link">
                 Главная
               </a>
             </li>
-            <li class="navigation__item">
+            <li class="navigation__item navigation__item--position">
               <a href="catalog.html" class="navigation__link">
                 Фото и видео
               </a>
             </li>
-          </ul>
-          <ul class="navigation__list">
             <li class="navigation__item">
               <a href="#" class="navigation__link navigation__link--current">
                 Форма отзыва
@@ -169,7 +164,7 @@
               </ul>
             </fieldset>
             <fieldset class="form__fieldset fieldset">
-              <label class="fieldset__title" for="emotion">
+              <label class="fieldset__title fieldset__title--decoration" for="emotion">
                 Опишите свои эмоции:
               </label>
               <textarea name="emotion" class="fieldset__textarea" placeholder="Опишите подробно все свои восторги" id="emotion">
@@ -255,6 +250,6 @@
         </button>
       </div>
     </div>
-    <script src="source/js/script.js" class="menu"></script>
+    <script src="../source/js/script.js"></script>
   </body>
 </html>

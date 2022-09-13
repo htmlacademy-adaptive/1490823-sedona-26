@@ -21,11 +21,11 @@
       padding-right: 43px;
     }
 
-    &:nth-child (2) {
+    &:nth-child(2) {
       padding-left: 43px;
     }
 
-    &:nth-child (n + 3) {
+    &:nth-child(n + 3) {
       width: 100%;
       margin-top: 48px;
     }
@@ -43,12 +43,14 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
     align-items: center;
   }
 
   @media (min-width: @desktop-width) {
+    padding: 0 45px;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: center;
   }
 }
 
@@ -63,8 +65,9 @@
 
 .fieldset__title--decoration {
   @media (min-width: @tablet-width) {
+    display: block;
     position: relative;
-    width: 40%;
+    width: 310px;
 
     &::before {
       content: "";
@@ -73,12 +76,13 @@
       height: 1px;
       position: absolute;
       bottom: 50%;
-      left: -70%;
+      left: -60%;
       z-index: 1;
       background: #dbdbdb;
 
       @media (min-width: @desktop-width) {
         width: 208px;
+        left: -100%;
       }
     }
 
@@ -89,12 +93,13 @@
       height: 1px;
       position: absolute;
       bottom: 50%;
-      right: -70%;
+      right: -60%;
       z-index: 1;
       background: #dbdbdb;
 
       @media (min-width: @desktop-width) {
         width: 208px;
+        right: -100%;
       }
     }
   }
@@ -165,6 +170,7 @@
 
   @media (min-width: @desktop-width) {
     width: 100%;
+    justify-content: center;
   }
 }
 
@@ -279,7 +285,12 @@
   }
 
   @media (min-width: @tablet-width) {
+    width: 648px;
     margin-bottom: 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 768px;
   }
 }
 
@@ -293,8 +304,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 960px;
-    margin-bottom: 64px;
-    padding: 0 96px;
+    width: 768px;
   }
 }

@@ -18,17 +18,24 @@
   list-style-type: none;
 
   @media (min-width: @tablet-width) {
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     color: #000000;
     box-shadow: none;
     font-size: 14px;
     line-height: 1.5;
     background: none;
   }
+}
+
+.navigation__item--position {
+  @media (min-width: @tablet-width) {
+    margin-right: 23%;
+  }
 
   @media (min-width: @desktop-width) {
-    width: 40%;
+    margin-right: 33%;
   }
 }
 
@@ -43,6 +50,10 @@
 .navigation__item {
   @media (min-width: @tablet-width) {
     padding: 0 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 48px;
   }
 }
 
@@ -59,16 +70,6 @@
   line-height: 1.44;
   font-weight: 700;
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-
-  &:hover {
-    background: #669ec0;
-  }
-
-  &:active {
-    background: #5496bd;
-    opacity: 0.2;
-  }
-
 
   @media (min-width: @tablet-width) {
     width: auto;
