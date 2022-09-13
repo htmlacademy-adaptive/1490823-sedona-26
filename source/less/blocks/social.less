@@ -35,6 +35,10 @@
   @media (min-width: @tablet-width) {
     margin: 0 100px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 250px;
+  }
 }
 
 .social__link {
@@ -43,6 +47,14 @@
   height: 48px;
   background: #81b3d2;
   position: relative;
+
+  &:hover {
+    background: #669ec0;
+  }
+
+  &:active {
+    background: #5496bd;
+  }
 }
 
 .social__img {

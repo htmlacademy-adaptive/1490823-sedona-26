@@ -14,30 +14,30 @@
         <a href="index.html" class="header-logo">
           <img src="img/sedona-logo.svg" width="185" height="96" alt="Логотип Седона" class="header-logo__img">
         </a>
-
-        <!--  Javascript, при нажатии на кнопку "бургер-меню", добавляет класс header__button--toggle в тег "button" и убирает класс "navigation--hidden"в теге "nav" -->
-
-        <button class="burger-button" type="button">
+        <button class="button-toggle" type="button" id="button-toggle">
           <span class="visually-hidden">Выпадающее меню.</span>
         </button>
-
-        <!--  Javascript, при нажатии на кнопку "крестик", добавляет класс "navigation--hidden"  в тег "nav" и убирает класс "header__button--toggle" в теге "button"   -->
-
-        <nav class="header__navigation navigation navigation--hidden">
+        <nav class="header__navigation navigation navigation--hidden" id="navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a href="index.html" class="navigation__link">Главная</a>
+              <a href="index.html" class="navigation__link">
+                Главная
+              </a>
+            </li>
+            <li class="navigation__item navigation__item--position">
+              <a href="catalog.html" class="navigation__link">
+                Фото и видео
+              </a>
             </li>
             <li class="navigation__item">
-              <a href="catalog.html" class="navigation__link">Фото и видео</a>
-            </li>
-          </ul>
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a href="#" class="navigation__link">Форма отзыва</a>
+              <a href="#" class="navigation__link navigation__link--current">
+                Форма отзыва
+              </a>
             </li>
             <li class="navigation__item">
-              <a href="https://htmlacademy.ru" class="navigation__link">HTML Academy</a>
+              <a href="https://htmlacademy.ru" class="navigation__link">
+                HTML Academy
+              </a>
             </li>
           </ul>
         </nav>
@@ -61,23 +61,32 @@
           </p>
         </section>
         <section class="feedback">
-          <h3 class=visually-hidden>Заполните форму отзыва о путешесвии.</h3>
+          <h3 class=visually-hidden>
+            Заполните форму отзыва о путешесвии.
+          </h3>
           <form class="feedback__form form" name="form" action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="form__fieldset fieldset">
-              <h4 class="fieldset__title">Представьтесь:</h4>
+              <h4 class="fieldset__title">
+                Представьтесь:
+              </h4>
               <ul class="fieldset__list">
                 <li class="fieldset__item fieldset__item--position">
                   <label class="fieldset__label" for="client-firstname">
-                    Имя*:</label>
+                    Имя*:
+                  </label>
                   <input type="text" placeholder="Пётр" required name="client-firstname" class="fieldset__input fieldset__input--view" id="client-firstname">
                 </li>
                 <li class="fieldset__item fieldset__item--position">
-                  <label class="fieldset__label" for="client-lastname">Фамилия*:</label>
+                  <label class="fieldset__label" for="client-lastname">
+                    Фамилия*:
+                  </label>
                   <input type="text" placeholder="Пустота" required name="client-lastname" class="fieldset__input fieldset__input--view" id="client-lastname">
                 </li>
                 <li class="fieldset__item fieldset__item--position">
-                  <label class="fieldset__label" for="client-middle-name">Отчество:</label>
-                  <input type="text" placeholder="Викторович" name="client-middle-name" class="fieldset__input fieldset__input--view" id="client-middle-name">
+                  <label class="fieldset__label" for="client-middle-name">
+                    Отчество:
+                  </label>
+                  <input type="text" placeholder="Викторович" name="client-middle-name" class="fieldset__input " id="client-middle-name">
                 </li>
               </ul>
             </fieldset>
@@ -85,57 +94,67 @@
               <h4 class="fieldset__title">Контактная информация:</h4>
               <ul class="fieldset__list">
                 <li class="fieldset__item fieldset__item--position">
-                  <label class="fieldset__label" for="client-phone">Контактный телефон*:</label>
-                  <input type="tel" placeholder="Введите телефон" required name="client-phone" class="fieldset__input fieldset__input--view" id="client-phone">
+                  <label class="fieldset__label" for="client-phone">
+                    Контактный телефон*:
+                  </label>
+                  <input type="tel" placeholder="Введите телефон" required name="client-phone" class="fieldset__input fieldset__input--width" id="client-phone">
+                  <img src="img/phone-icon.svg" width="58" height="58" alt="Иконка телефон" class="fieldset__icon">
                 </li>
                 <li class="fieldset__item fieldset__item--position">
-                  <label class="fieldset__label" for="client-email">Электронная почта*:</label>
-                  <input type="email" placeholder="Введите email" required name="client-email" class="fieldset__input fieldset__input--view" id="client-email">
+                  <label class="fieldset__label fieldset__label--icon" for="client-email">
+                    Контактный email*:
+                  </label>
+                  <input type="email" placeholder="Введите email" required name="client-email" class="fieldset__input fieldset__input--width" id="client-email">
+                  <img src="img/email-icon.svg" width="58" height="58" alt="Иконка email" class="fieldset__icon">
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form__fieldset fieldset fieldset--position">
-              <h4 class="fieldset__title">Ваше общее впечатление:</h4>
+            <fieldset class="form__fieldset fieldset">
+              <h4 class="fieldset__title fieldset__title--decoration">Ваше общее впечатление:</h4>
               <ul class="fieldset__list fieldset__list--position">
-                <li class="fieldset__item fieldset__item--width">
-                  <input type="radio" checked name="impression" class="fieldset__radio fieldset__radio--view" id="impression-good">
-                  <label class="fieldset__label" for="impression-good">Скорее положительное</label>
+                <li class="fieldset__item-impression">
+                  <input type="radio" checked name="impression" class="fieldset__radio" id="impression-good">
+                  <label class="fieldset__label-impression" for="impression-good">Скорее положительное</label>
                 </li>
-                <li class="fieldset__item fieldset__item--width">
-                  <input type="radio" name="impression" class="fieldset__radio fieldset__radio--view" id="impression-bad">
-                  <label class="fieldset__label" for="impression-bad">Скорее отрицательное</label>
+                <li class="fieldset__item-impression">
+                  <input type="radio" name="impression" class="fieldset__radio" id="impression-bad">
+                  <label class="fieldset__label-impression" for="impression-bad">Скорее отрицательное</label>
                 </li>
-                <li class="fieldset__item fieldset__item--width">
-                  <input type="radio" name="impression" class="fieldset__radio fieldset__radio--view" id="impression-unknown">
-                  <label class="fieldset__label" for="impression-unknown">Затрудняюсь ответить</label>
+                <li class="fieldset__item-impression">
+                  <input type="radio" name="impression" class="fieldset__radio" id="impression-unknown">
+                  <label class="fieldset__label-impression" for="impression-unknown">Затрудняюсь ответить</label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form__fieldset fieldset fieldset--position">
-              <h4 class="fieldset__title">Посещённые достопримечательности:</h4>
+            <fieldset class="form__fieldset fieldset">
+              <h4 class="fieldset__title fieldset__title--decoration">
+                Посещённые достопримечательности:
+              </h4>
               <ul class="fieldset__list fieldset__list--position">
-                <li class="fieldset__item fieldset__item--width">
+                <li class="fieldset__item-impression">
                   <input type="checkbox" checked name="devil-bridge" class="fieldset__checkbox fieldset__checkbox--view" id="devil-bridge">
-                  <label class="fieldset__label" for="devil-bridge">Мост Дъявола</label>
+                  <label class="fieldset__label-impression" for="devil-bridge">Мост Дъявола</label>
                 </li>
-                <li class="fieldset__item fieldset__item--width">
+                <li class="fieldset__item-impression">
                   <input type="checkbox" checked name="bell-rock" class="fieldset__checkbox fieldset__checkbox--view" id="bell-rock">
-                  <label class="fieldset__label" for="bell-rock">Гора-Колокол</label>
+                  <label class="fieldset__label-impression" for="bell-rock">Гора-Колокол</label>
                 </li>
-                <li class="fieldset__item fieldset__item--width">
+                <li class="fieldset__item-impression">
                   <input type="checkbox" checked name="slide-park" class="fieldset__checkbox fieldset__checkbox--view" id="slide-park">
-                  <label class="fieldset__label" for="slide-park">Слайд-парк</label>
+                  <label class="fieldset__label-impression" for="slide-park">Слайд-парк</label>
                 </li>
-                <li class="fieldset__item fieldset__item--width">
+                <li class="fieldset__item-impression">
                   <input type="checkbox" name="red-rocks" class="fieldset__checkbox fieldset__checkbox--view" id="red-rocks">
-                  <label class="fieldset__label" for="red-rocks">
+                  <label class="fieldset__label-impression" for="red-rocks">
                     Красные скалы
                   </label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form__fieldset fieldset fieldset--scale">
-              <label class="fieldset__title" for="emotion">Опишите свои эмоции:</label>
+            <fieldset class="form__fieldset fieldset">
+              <label class="fieldset__title fieldset__title--decoration" for="emotion">
+                Опишите свои эмоции:
+              </label>
               <textarea name="emotion" class="fieldset__textarea" placeholder="Опишите подробно все свои восторги" id="emotion">
               </textarea>
             </fieldset>
@@ -143,7 +162,9 @@
               <button class="button form__button" type="submit">
                 Отправить отзыв
               </button>
-              <p class="form__info">* -обязательные поля</p>
+              <p class="form__info">
+                * -обязательные поля
+              </p>
             </div>
           </form>
         </section>
@@ -187,9 +208,10 @@
           </ul>
         </section>
         <section class="footer__copyright copyright">
-          <h2 class="copyright__title">Разработано</h2>
+          <h2 class="visually-hidden">Ссылка на разработчика</h2>
           <a href="https://htmlacademy.ru" class="copyright__link">
-            <svg class="copyright__logo" width="27" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path fill="#000000" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
+            Разработано
+            <svg class="copyright__logo" width="27" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
             </svg>
           </a>
         </section>
@@ -216,5 +238,6 @@
         </button>
       </div>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>

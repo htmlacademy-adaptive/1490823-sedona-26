@@ -18,17 +18,24 @@
   list-style-type: none;
 
   @media (min-width: @tablet-width) {
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     color: #000000;
     box-shadow: none;
     font-size: 14px;
     line-height: 1.5;
     background: none;
   }
+}
+
+.navigation__item--position {
+  @media (min-width: @tablet-width) {
+    margin-right: 23%;
+  }
 
   @media (min-width: @desktop-width) {
-    width: 40%;
+    margin-right: 33%;
   }
 }
 
@@ -43,6 +50,10 @@
 .navigation__item {
   @media (min-width: @tablet-width) {
     padding: 0 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 48px;
   }
 }
 
@@ -67,5 +78,19 @@
     font-size: 14px;
     line-height: 1.5;
     background: none;
+
+    &:hover {
+      color: #81b3d2;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.navigation__link--current {
+  @media (min-width: @tablet-width) {
+    color: #766357;
   }
 }
