@@ -41,10 +41,6 @@
 .reasons__img {
   display: block;
   width: 100%;
-
-  @media (min-width: @tablet-width) {
-    width: 66.67%;
-  }
 }
 
 .reasons__item {
@@ -65,8 +61,11 @@
 }
 
 .reasons__item--order {
+
   @media (min-width: @tablet-width) {
+    width: 100%;
     flex-direction: row-reverse;
+    flex-wrap: nowrap;
   }
 }
 
@@ -161,4 +160,10 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
+}
+
+.reasons__picture {
+  @media (min-width: @tablet-width){
+    width: 66.67%;
+  }
 }

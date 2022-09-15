@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
     <title>Седона</title>
   </head>
   <body class="page__body">
@@ -61,7 +62,11 @@
                   жизнь
                 </p>
               </div>
-              <img src="img/sedona-tablet.jpg" width="512" height="256" alt="Фото Седоны" class="reasons__img">
+              <picture class="reasons__picture">
+                <source media="(min-wdth: 768px)" srcset="img/photo-city-tablet@1x.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
+                <source media="(min-width: 1200px)" srcset="img/photo-city-pc@1x.jpg 1x, img/photo-city-pc@2x.jpg 2x">
+                <img src="img/photo-city-mobile@1x.jpg" width="512" height="256" alt="Фото Седоны" class="reasons__img" srcset="img/photo-city-mobile@2x.jpg 2x">
+              </picture>
               <ul class="reasons__sub-list reasons-inner">
                 <li class="reasons-inner__item">
                   <img src="img/accommodations.svg" alt="Иконка    домик." width="40" height="40" class="reasons-inner__img">
@@ -108,7 +113,11 @@
                   осмелитесь, конечно
                 </p>
               </div>
-              <img src="img/photo-bridge@1x.jpg" width="512" height="256" alt="Мост дъявола" class="reasons__img reasons__img--order">
+              <picture class="reasons__picture">
+                <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+                <source media="(min-width: 1200px)" srcset="img/photo-bridge-pc@1x.jpg 1x, img/photo-bridge-pc@2x.jpg 2x">
+                <img src="img/photo-bridge-mobile@1x.jpg" width="320" height="260" srcset="img/photo-bridge-mobule@2x.png 2x" alt="Мост дъявола" class="reasons__img">
+              </picture>
             </li>
             <li class="reasons__item reasons__item--view">
               <h3 class="reasons__title reasons__title--view">
