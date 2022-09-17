@@ -1,9 +1,7 @@
-let buttonToggle = document.getElementById("button-toggle");
-let navigation = document.getElementById("navigation");
+const buttonToggle = document.querySelector(".button-toggle");
+const navigation = document.querySelector(".navigation");
 
-console.log(navigation);
-
-buttonToggle.onclick = showMobileMenu;
+buttonToggle.addEventListener("click", showMobileMenu);
 
 function showMobileMenu() {
     buttonToggle.classList.toggle("button-toggle--close");
