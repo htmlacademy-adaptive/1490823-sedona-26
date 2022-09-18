@@ -1,9 +1,12 @@
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import less from 'gulp-less';
+import csso from 'postcss-csso';
 import postcss from 'gulp-postcss';
+import rename from 'gulp-rename';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
+import htmlmin from 'gulp-htmlmin';
 
 // Styles
 
@@ -12,10 +15,20 @@ export const styles = () => {
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      csso()
     ]))
+    .pipe(rename('source/css/style.min.css'))
     .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
+}
+
+
+//HTML
+export const html = () => {
+  return gulp.src("source/*.html")
+  .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest("source"));
 }
 
 // Server
