@@ -76,7 +76,7 @@ const createSprite = () => {
 //Copy
 const copy = (done) => {
   return gulp.src(['source/fonts/*.{woff,woff2}',
-    'source/*.ico', ], {
+    'source/*.ico', 'source/sprite.svg'], {
     base: 'source'
   })
     .pipe(gulp.dest('build'));
@@ -107,7 +107,6 @@ const reload = (done) => {
   browser.reload();
   done();
 }
-
 
 // Watcher
 

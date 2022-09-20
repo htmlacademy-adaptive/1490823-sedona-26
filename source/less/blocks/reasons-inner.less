@@ -36,9 +36,21 @@
   }
 }
 
-.reasons-inner__item {
+.reasons-inner__item--accommodations {
   padding-left: 65px;
   position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -13px;
+    left: 18px;
+    z-index: 10;
+    background: url("../../img/accommodations.svg") center no-repeat;
+  }
 
   @media (min-width: @tablet-width) {
     width: 33.33%;
@@ -47,22 +59,87 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+
+    &::after {
+      width: 75px;
+      height: 75px;
+      left: 50%;
+      top: 60px;
+      transform: translate(-50%, -50%);
+      background: url("../../img/accommodations.svg") center no-repeat;
+      background-size: cover;
+    }
   }
 }
 
-.reasons-inner__img {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: -13px;
-  left: 18px;
-  z-index: 1;
+.reasons-inner__item--meals {
+  padding-left: 65px;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -13px;
+    left: 18px;
+    z-index: 10;
+    background: url("../../img/meals.svg") center no-repeat;
+  }
 
   @media (min-width: @tablet-width) {
-    width: 75px;
-    height: 75px;
-    left: 50%;
-    top: 60px;
-    transform: translate(-50%, -50%);
+    width: 33.33%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &::after {
+      width: 75px;
+      height: 75px;
+      left: 50%;
+      top: 60px;
+      transform: translate(-50%, -50%);
+      background: url("../../img/meals.svg") center no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.reasons-inner__item--souvenirs {
+  padding-left: 65px;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -13px;
+    left: 18px;
+    z-index: 10;
+    background: url("../../img/souvenirs.svg") center no-repeat;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 33.33%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &::after {
+      width: 75px;
+      height: 75px;
+      left: 50%;
+      top: 60px;
+      transform: translate(-50%, -50%);
+      background: url("../../img/souvenirs.svg") center no-repeat;
+      background-size: cover;
+    }
   }
 }
