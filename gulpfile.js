@@ -23,16 +23,16 @@ export const styles = () => {
       autoprefixer(),
       csso()
     ]))
-    .pipe(rename('css/style.min.css'))
-    .pipe(gulp.dest('build', { sourcemaps: '.' }))
+    .pipe(rename('style.min.css'))
+    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
 
 //HTML
 const html = () => {
   return gulp.src("source/*.html")
-  .pipe(htmlmin({collapseWhitespace: true}))
-  .pipe(gulp.dest("build"));
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest("build"));
 }
 
 //Scripts
@@ -67,16 +67,16 @@ const optimizeSvg = () => {
 //Sprite
 const createSprite = () => {
   return gulp.src('source/img/icons/*.svg')
-  .pipe(svgo())
-  .pipe(svgstore({inlineSvg: true}))
-  .pipe(rename('sprite.svg'))
-  .pipe(gulp.dest('build/img/icon'))
+    .pipe(svgo())
+    .pipe(svgstore({inlineSvg: true}))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img/icons'))
 }
 
 //Copy
 const copy = (done) => {
   return gulp.src(['source/fonts/*.{woff,woff2}',
-    'source/*.ico', 'source/sprite.svg'], {
+    'source/*.ico'], {
     base: 'source'
   })
     .pipe(gulp.dest('build'));
@@ -128,7 +128,7 @@ export const build = gulp.series (
     optimizeSvg,
     createSprite,
     createWebp
-  ),
+  )
 )
 
 //Start
@@ -150,5 +150,5 @@ export const start = gulp.series (
 )
 
 export default gulp.series(
-  html, styles, server, watcher
+  start
 );
