@@ -1,0 +1,1 @@
+const buttonToggle=document.querySelector(".button-toggle"),navigation=document.querySelector(".navigation");function showMobileMenu(){buttonToggle.classList.toggle("button-toggle--close"),navigation.classList.toggle("navigation--hidden")}buttonToggle.addEventListener("click",showMobileMenu);
