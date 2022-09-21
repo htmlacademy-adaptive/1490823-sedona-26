@@ -45,10 +45,26 @@
 }
 
 .video__frame {
+  display: block;
   border: 0;
-  width: 100%;
+  width: 280px;
+  height: 177px;
+  background-color: #669ec0;
+  background-image: url("../img/video-mobile.webp");
+  background-position: center;
+  background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
+    display: block;
+    margin: 0 auto;
+    width: 648px;
     height: 500px;
+    background-image: url("../img/video-tablet.webp");
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+    height: 500px;
+    background-image: url("../img/video-desktop.webp");
   }
 }
