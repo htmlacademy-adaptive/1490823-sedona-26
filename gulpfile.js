@@ -70,13 +70,13 @@ const createSprite = () => {
     .pipe(svgo())
     .pipe(svgstore({inlineSvg: true}))
     .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('build/img/icon'))
+    .pipe(gulp.dest('build/img/icons'))
 }
 
 //Copy
 const copy = (done) => {
   return gulp.src(['source/fonts/*.{woff,woff2}',
-    'source/*.ico', 'source/sprite.svg'], {
+    'source/*.ico'], {
     base: 'source'
   })
     .pipe(gulp.dest('build'));
@@ -128,7 +128,7 @@ export const build = gulp.series (
     optimizeSvg,
     createSprite,
     createWebp
-  ),
+  )
 )
 
 //Start
@@ -150,5 +150,5 @@ export const start = gulp.series (
 )
 
 export default gulp.series(
-  html, styles, server, watcher
+  start
 );
