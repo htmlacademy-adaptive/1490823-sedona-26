@@ -31,8 +31,8 @@ export const styles = () => {
 //HTML
 const html = () => {
   return gulp.src("source/*.html")
-  .pipe(htmlmin({collapseWhitespace: true}))
-  .pipe(gulp.dest("build"));
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest("build"));
 }
 
 //Scripts
@@ -67,10 +67,10 @@ const optimizeSvg = () => {
 //Sprite
 const createSprite = () => {
   return gulp.src('source/img/icons/*.svg')
-  .pipe(svgo())
-  .pipe(svgstore({inlineSvg: true}))
-  .pipe(rename('sprite.svg'))
-  .pipe(gulp.dest('build/img/icon'))
+    .pipe(svgo())
+    .pipe(svgstore({inlineSvg: true}))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img/icon'))
 }
 
 //Copy
@@ -79,7 +79,7 @@ const copy = (done) => {
     'source/*.ico', 'source/sprite.svg'], {
     base: 'source'
   })
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('build'));
   done();
 }
 
@@ -89,6 +89,7 @@ const clean = () => {
 }
 
 // Server
+
 const server = (done) => {
   browser.init({
     server: {
@@ -108,6 +109,7 @@ const reload = (done) => {
 }
 
 // Watcher
+
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/*.html', gulp.series(html, reload))
@@ -130,7 +132,7 @@ export const build = gulp.series (
 )
 
 //Start
-const start = gulp.series (
+export const start = gulp.series (
   clean,
   copy,
   optimizeImg,
@@ -148,5 +150,5 @@ const start = gulp.series (
 )
 
 export default gulp.series(
-
+  html, styles, server, watcher
 );
