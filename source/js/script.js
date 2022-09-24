@@ -1,9 +1,9 @@
 const buttonToggle = document.querySelector(".button-toggle");
 const navigation = document.querySelector(".navigation");
 
-buttonToggle.addEventListener("click", showMobileMenu);
+buttonToggle.addEventListener("click", toggleMobileMenu);
 
-function showMobileMenu() {
+function toggleMobileMenu() {
     buttonToggle.classList.toggle("button-toggle--close");
     navigation.classList.toggle("navigation--hidden");
 }
