@@ -262,6 +262,18 @@
   background-position: center;
 }
 
+.fieldset__checkbox:focus + label::before {
+  background-color: #d2d2d2;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fieldset__checkbox:focus:not(:checked) + label::before {
+  background-color: #d2d2d2;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .fieldset__textarea {
   font-family: inherit;
   display: block;
